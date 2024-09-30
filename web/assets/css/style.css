@@ -1,0 +1,58 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Sep 30, 2024, 3:16:28 AM
+    Author     : TuLinh
+*/
+
+/* style.css */
+
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.header-icons a {
+    text-decoration: none;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.header-icons input[type="text"] {
+    width: 200px;
+}
+
+.nav {
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table img {
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+}
