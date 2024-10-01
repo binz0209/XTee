@@ -66,10 +66,10 @@
     <nav class="navbar flex-column sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_user.jsp") ? "active" : "" %>" href="../adminUser">User</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_user.jsp") ? "active" : "" %>" href="./admin_user.jsp">User</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_content.jsp") ? "active" : "" %>" href="../adminContent">Content</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_content.jsp") ? "active" : "" %>" href="./admin_content.jsp">Content</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <%= request.getRequestURI().endsWith("admin_report.jsp") ? "active" : "" %>" href="../adminReport">Report</a>
