@@ -1,6 +1,6 @@
 <%-- 
     Document   : admin_user
-    Created on : Sep 29, 2024, 11:25:13?PM
+    Created on : Sep 29, 2024, 11:25:13 PM
     Author     : TuLinh
 --%>
 
@@ -176,91 +176,22 @@
                         <img src="<%= user.getAvatar() %>" class="avatar-img"> <!-- Hiển thị avatar -->
                     </td>
                     <td style="text-align: center;"><%= user.getRole() %></td>
-                    <td><%= user.getFullName() %></td>
-                    <td><%= user.getUsername() %></td>
-                    <td><%= user.getJoinDate() %></td>
-                    <td style="text-align: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="cursor:pointer;" 
-                             onclick="openUserOptions(event, '<%= user.getId() %>')">
-                            <path fill="currentColor" d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z" />
-                        </svg>
-                    </td>
+                    <td style="text-align: center;"><%= user.getFullName() %></td>
+                    <td style="text-align: center;"><%= user.getUsername() %></td>
+                    <td style="text-align: center;"><%= user.getJoinDate() %></td>
                 </tr>
                 <%
                         }
-                    } else {
                 %>
+                <% } else { %>
                 <tr>
-                    <td colspan="6" class="no-users">No users found.</td>
+                    <td colspan="6" class="no-users">No users found.</td> <!-- Thông báo không có người dùng -->
                 </tr>
-                <%
-                    }
-                %>
+                <% } %>
             </table>
         </div>
-        
     </div>
 
-    <!-- Popup Modal -->
-    <div class="modal" id="userOptionsModal">
-        <div class="modal-header">
-            <h5 class="modal-title">User Options</h5>
-            <button type="button" class="close" onclick="closeModal()">×</button>
-        </div>
-        <div class="modal-body">
-            <ul class="list-group">
-                <li class="list-group-item" onclick="viewProfile()">View Profile</li>
-                <li class="list-group-item" onclick="accountInfo()">Account Information</li>
-                <li class="list-group-item" onclick="contentHistory()">Content Posting History</li>
-                <li class="list-group-item" onclick="banUser()">Ban User</li>
-            </ul>
-        </div>
-    </div>
-
-
-
-    <!-- jQuery và Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function openUserOptions(event, userId) {
-            // Lưu ID người dùng vào biến toàn cục để sử dụng trong các hàm khác
-            window.selectedUserId = userId;
-
-            // Tính toán vị trí để popup xuất hiện ngay bên cạnh biểu tượng
-            const modal = $('#userOptionsModal');
-            const offset = $(event.currentTarget).offset();
-            modal.css({
-                top: offset.top + 20, // Đặt khoảng cách từ trên
-                left: offset.left - 10 // Đặt khoảng cách từ bên trái
-            });
-            modal.addClass('show'); // Hiện modal
-        }
-
-        function closeModal() {
-            $('#userOptionsModal').removeClass('show'); // Ẩn modal
-        }
-
-        function viewProfile() {
-            alert('View Profile for User ID: ' + window.selectedUserId);
-            closeModal(); // Đóng modal sau khi chọn
-        }
-
-        function accountInfo() {
-            alert('Account Info for User ID: ' + window.selectedUserId);
-            closeModal(); // Đóng modal sau khi chọn
-        }
-
-        function contentHistory() {
-            alert('Content Posting History for User ID: ' + window.selectedUserId);
-            closeModal(); // Đóng modal sau khi chọn
-        }
-
-        function banUser() {
-            if (confirm('Are you sure you want to ban User ID: ' + window.selectedUserId + '?')) {
-                alert('User ID: ' + window.selectedUserId + ' has been banned.');
-                closeModal(); // Đóng modal sau khi chọn
-            }
-        }
-    </script>
+    <script src="${pageContext.request.contextPath}/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

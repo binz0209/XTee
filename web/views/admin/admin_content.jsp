@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>User Management</title>
+    <title>Content Management</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <style>
         html, body {

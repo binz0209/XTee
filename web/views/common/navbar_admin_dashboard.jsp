@@ -72,13 +72,13 @@
                 <a class="nav-link <%= request.getRequestURI().endsWith("admin_content.jsp") ? "active" : "" %>" href="./admin_content.jsp">Content</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_report.jsp") ? "active" : "" %>" href="../adminReport">Report</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_report.jsp") ? "active" : "" %>" href="./adminReport">Report</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_advertisement.jsp") ? "active" : "" %>" href="../adminAdvertisement">Advertisement</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_advertisement.jsp") ? "active" : "" %>" href="./adminAdvertisement">Advertisement</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_audit_log.jsp") ? "active" : "" %>" href="../adminAuditLog">Audit/Log</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_audit_log.jsp") ? "active" : "" %>" href="./adminAuditLog">Audit/Log</a>
             </li>
             <li class="nav-item logout-item">
                 <a class="nav-link" href="logout.jsp">
