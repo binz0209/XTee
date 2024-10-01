@@ -17,4 +17,44 @@
         <servlet-name>AdminUserServlet</servlet-name>
         <url-pattern>/adminUser</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminContentServlet</servlet-name>
+        <servlet-class>controller.AdminContentServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminContentServlet</servlet-name>
+        <url-pattern>/adminContent</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminReportServlet</servlet-name>
+        <servlet-class>controller.AdminReportServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminReportServlet</servlet-name>
+        <url-pattern>/adminReport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminAdvertisementServlet</servlet-name>
+        <servlet-class>controller.AdminAdvertisementServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminAdvertisementServlet</servlet-name>
+        <url-pattern>/adminAdvertisement</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AdminAuditLogServlet</servlet-name>
+        <servlet-class>controller.AdminAuditLogServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminAuditLogServlet</servlet-name>
+        <url-pattern>/adminAuditLog</url-pattern>
+    </servlet-mapping>
 </web-app>
