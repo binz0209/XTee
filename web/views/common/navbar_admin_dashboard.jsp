@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <style>
         * {
-            box-sizing: border-box;
+            box-sizing: border-box; /* Ensure padding does not affect width */
         }
         body {
             display: flex; /* Use flexbox layout */
@@ -84,7 +84,7 @@
                 <a class="nav-link <%= request.getRequestURI().endsWith("admin_auditlog.jsp") ? "active" : "" %>" href="./admin_auditlog.jsp">Audit/Log</a>
             </li>
             <li class="nav-item logout-item">
-                <a class="nav-link" href="../member/login.jsp">
+                <a class="nav-link" href="../member.jsp">
                     Log Out
                     <svg class="logout-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                         <path fill="currentColor" d="m17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5M4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4z"/>
