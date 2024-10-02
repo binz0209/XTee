@@ -10,5 +10,10 @@
             <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_content.jsp</file>
             <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_report.jsp</file>
         </group>
+        <group>
+            <file>file:/D:/XTee/web/views/common/header_admindashboard.jsp</file>
+            <file>file:/D:/XTee/web/views/admin/admin_report.jsp</file>
+            <file>file:/D:/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
+        </group>
     </open-files>
 </project-private>
