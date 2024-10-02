@@ -34,7 +34,7 @@
             flex-grow: 1; /* Allow the nav to grow */
         }
         .nav-item {
-            border-bottom: 1px solid #ccc; /* Optional: Add border between items */
+            border-bottom: 1px solid #000000; /* Optional: Add border between items */
         }
         .nav-link {
             color: #000; /* Change link color */
