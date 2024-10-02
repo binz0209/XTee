@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <style>
         * {
-            box-sizing: border-box; /* Ensure padding does not affect width */
+            box-sizing: border-box;
         }
         body {
             display: flex; /* Use flexbox layout */
