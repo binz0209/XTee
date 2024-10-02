@@ -1,6 +1,6 @@
 <%-- 
-    Document   : admin_report
-    Created on : Oct 2, 2024, 12:16:18 AM
+    Document   : admin_ads
+    Created on : Oct 2, 2024, 9:31:15 PM
     Author     : TuLinh
 --%>
 
@@ -11,7 +11,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Report Management</title>
+    <title>Advertisement Management</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
     <style>
         html, body {
@@ -50,7 +50,7 @@
             overflow-y: auto;
         }
 
-        .post-container {
+        .ads-container {
             background-color: #ffffff;
             padding: 15px;
             border-radius: 10px;
@@ -125,12 +125,55 @@
             padding: 20px;
             color: #dc3545;
         }
-        .report-container {
+        .ads-detail {
             background-color: #CCE0AC; /* Màu nền cho từng báo cáo */
             padding: 15px;
             border-radius: 10px; /* Bo góc cho từng báo cáo */
             margin: 10px 0; /* Khoảng cách giữa các báo cáo */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+        }
+        .user-info {
+            display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+            justify-content: space-between; /* Căn đều không gian giữa các phần tử */
+            align-items: center; /* Căn giữa theo chiều dọc */
+            width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+        }
+
+        .button-container {
+            display: flex; /* Sử dụng flexbox để đặt các nút sát nhau */
+            margin-left: auto; /* Đẩy button-container sang bên phải */
+        }
+        .btn {
+            margin-left: 10px; /* Khoảng cách giữa các nút */
+            padding: 8px 14px; /* Padding cho nút */
+            border: none; /* Bỏ viền */
+            border-radius: 15px; /* Bo góc 15 độ */
+            cursor: pointer; /* Hiển thị con trỏ khi hover */
+            border: 1px solid black; /* Viền đen cho nút */
+            color: black; /* Màu chữ đen cho nút */
+            font-size: 1.1rem;
+        }
+        .accept-btn {
+            background-color: #CCE0AC; /* Màu nền cho nút Accept */
+        }
+
+        .deny-btn {
+            background-color: #FF5E5E; /* Màu nền cho nút Deny */
+        }
+
+        .accepted {
+            color: #00BC32; /* Màu chữ cho nút Accepted */
+            background-color: transparent; /* Xóa màu nền */
+            border: none; /* Bỏ viền */
+        }
+        .denied {
+            color: #dc3545; /* Màu chữ cho nút Denied */
+            background-color: transparent; /* Xóa màu nền */
+            border: none; /* Bỏ viền */
+        }
+
+        .delete-btn {
+            background-color: #FFCCCB; /* Màu nền cho nút Delete */
         }
     </style>
 </head>
@@ -150,44 +193,61 @@
             </svg>
         </div>
 
-       
-        <div class="post-container">
+        <div class="ads-container">
             <div class="user-info">
                 <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar-img">
                 <span class="full-name">Nguyen Xuan Hung</span>
+                <div class="button-container">
+                    <button class="btn accept-btn" onclick="acceptAd(this)">Accept</button>
+                    <button class="btn deny-btn" onclick="denyAd(this)">Deny</button>
+                    <button class="btn delete-btn" onclick="deleteAd(this)" style="display:none;">Delete</button>
+                </div>
             </div>
             <p class="post-caption">Yummy</p>
             <img src="https://via.placeholder.com/600x300" alt="Post Image" class="post-image">
             <!-- Report List -->
             <div>
-                <h2>Report List</h2>
-
-                <div class="report-container">
-                    <div class="user-info">
-                        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar-img">
-                        <div>
-                            <span class="user-name">Pham Van An 1</span>
-                            <span class="role">Member</span>
-                            <span class="report-time">10:30 AM, Oct 1, 2024</span>
-                        </div>
-                    </div>
-                    <p class="post-caption">The post contains offensive content that violates community standards.</p>
-                </div>
-
-                <div class="report-container">
-                    <div class="user-info">
-                        <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar-img">
-                        <div>
-                            <span class="user-name">Pham Van An 2</span>
-                            <span class="role">Member</span>
-                            <span class="report-time">11:00 AM, Oct 1, 2024</span>
-                        </div>
-                    </div>
-                    <p class="post-caption">The content is discriminatory and offensive to others.</p>
-                </div>
+                <!-- Ads-Details -->
+                <p>Campaign name: Food Process Technology</p>
+                <p>Start date: 01/09/2024</p>
+                <p>End date: 01/10/2024</p>
+                <p>Total clicks: 9876</p>
+                <p>Budget: 30$</p>
             </div>
-
         </div>
     </div>
+
+    <script>
+        function acceptAd(button) {
+            const adContainer = button.closest('.ads-container');
+            const denyButton = adContainer.querySelector('.deny-btn');
+            const deleteButton = adContainer.querySelector('.delete-btn');
+
+            // Đổi màu nút Accept và Disable Deny
+            button.classList.add('accepted');
+            denyButton.style.display = 'none'; // Ẩn nút Deny
+            button.innerText = 'Accepted'; // Thay đổi nội dung nút Accept
+            button.disabled = true; // Khóa nút Accept
+            deleteButton.style.display = 'inline'; // Hiện nút Delete
+        }
+
+        function denyAd(button) {
+            const adContainer = button.closest('.ads-container');
+            const acceptButton = adContainer.querySelector('.accept-btn');
+            const deleteButton = adContainer.querySelector('.delete-btn');
+
+            // Đổi màu nút Deny và Disable Accept
+            button.classList.add('denied');
+            acceptButton.style.display = 'none'; // Ẩn nút Accept
+            button.innerText = 'Denied'; // Thay đổi nội dung nút Deny
+            button.disabled = true; // Khóa nút Deny
+            deleteButton.style.display = 'inline'; // Hiện nút Delete
+        }
+
+        function deleteAd(button) {
+            const adContainer = button.closest('.ads-container');
+            adContainer.remove(); // Xóa quảng cáo khỏi giao diện
+        }
+    </script>
 </body>
 </html>

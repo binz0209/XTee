@@ -34,7 +34,7 @@
             flex-grow: 1; /* Allow the nav to grow */
         }
         .nav-item {
-            border-bottom: 1px solid #ccc; /* Optional: Add border between items */
+            border-bottom: 1px solid #000000; /* Optional: Add border between items */
         }
         .nav-link {
             color: #000; /* Change link color */
@@ -51,9 +51,12 @@
         .nav-link.active { /* Apply styles for hover and active link */
             background-color: #CCE0AC; /* Background color on hover or active */
         }
+        .nav-link.active {
+            background-color: #CCE0AC; /* Màu nền xanh cho phần tử được chọn */
+        }
         .logout-item {
             margin-top: auto; /* Push logout button to the bottom */
-            border-top: 1px solid #ccc; /* Optional: border above logout */
+            border-top: 1px solid #CCE0AC; /* Optional: border above logout */
         }
         .logout-icon {
             margin-left: 8px; /* Space between text and icon */
@@ -75,10 +78,10 @@
                 <a class="nav-link <%= request.getRequestURI().endsWith("admin_report.jsp") ? "active" : "" %>" href="./admin_report.jsp">Report</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_advertisement.jsp") ? "active" : "" %>" href="../adminAdvertisement">Advertisement</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_ads.jsp") ? "active" : "" %>" href="./admin_ads.jsp">Advertisement</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("admin_audit_log.jsp") ? "active" : "" %>" href="../adminAuditLog">Audit/Log</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("admin_auditlog.jsp") ? "active" : "" %>" href="./admin_auditlog.jsp">Audit/Log</a>
             </li>
             <li class="nav-item logout-item">
                 <a class="nav-link" href="logout.jsp">
