@@ -13,12 +13,13 @@
         <group>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Post.java</file>
-            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/admin/admin_user.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/admin/admin_ads_details.jsp</file>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/member/login.jsp</file>
-            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/User.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/admin/admin_user.jsp</file>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Report.java</file>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/admin/admin_content.jsp</file>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/member/register.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/member/payment_done.jsp</file>
         </group>
     </open-files>
 </project-private>
