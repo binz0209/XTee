@@ -215,8 +215,16 @@
                 background-color: #fff; /* Màu nền trắng cho các phần tử */
                 transition: box-shadow 0.3s; /* Thêm hiệu ứng cho box-shadow */
                 position:relative;
+                display: grid;
+                grid-template-columns: 3fr auto; /* Chia layout thành 3 cột */
+                align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+                gap: 10px; /* Khoảng cách giữa các cột */
             }
-
+            .friend-info {
+                display: flex;
+                align-items: center; /* Canh giữa hình ảnh và tên theo chiều dọc */
+                gap: 10px; /* Khoảng cách giữa ảnh và tên */
+            }
             .friend-avatar {
                 width: 40px;
                 height: 40px;
@@ -225,7 +233,7 @@
             }
 
             .friend-name {
-                font-style: bold;
+                font-weight: bold;
                 font-size: 16px;
                 color: #333;
             }
@@ -243,53 +251,61 @@
         </style>
     </head>
     <body>
-    <div class="profile-container">
-        <div class="profile-header">
-            <div class="profile-pic">
-                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
-            </div>
-            <div class="profile-info">
-                <h2>Nguyen Xuan Hung</h2>
-                <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
-            </div>
-            <div class="actions">
-                <button class="edit-profile">
-                    <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
-                </button>
-                <button class="ads-service">
-                    <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
-                </button>
-            </div>
-        </div>
-
-        <div class="tabs">
-            <a href="#">Posts</a>
-            <a href="#"  class="active"><b>Friends</b></a>
-            <a href="#">Pictures</a>
-        </div>
-        <div class="friends-list">
-            <div class="friend">
-                <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 1" class="friend-avatar">
-                <span class="friend-name">Nguyễn Văn A</span>
-                <i class="show-more"></i>
-            </div>
-            <div class="friend">
-                <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 2" class="friend-avatar">
-                <span class="friend-name">Trần Thị B</span>
-                <i class="show-more"></i>
-            </div>
-            <div class="friend">
-                <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 3" class="friend-avatar">
-                <span class="friend-name">Lê Văn C</span>
-                <i class="show-more"></i>
-            </div>
-            <div class="friend">
-                <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 4" class="friend-avatar">
-                <span class="friend-name">Nguyễn Thị D</span>
-                <i class="show-more"></i>
+        <div class="profile-container">
+            <div class="profile-header">
+                <div class="profile-pic">
+                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
+                </div>
+                <div class="profile-info">
+                    <h2>Nguyen Xuan Hung</h2>
+                    <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
+                </div>
+                <div class="actions">
+                    <button class="edit-profile">
+                        <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
+                    </button>
+                    <button class="ads-service">
+                        <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
+                    </button>
+                </div>
             </div>
 
+            <div class="tabs">
+                <a href="#">Posts</a>
+                <a href="#"  class="active"><b>Friends</b></a>
+                <a href="#">Pictures</a>
+            </div>
+            <div class="friends-list">
+                <div class="friend">
+                    <div class="friend-info">
+                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 1" class="friend-avatar">
+                        <span class="friend-name">Nguyễn Văn A</span>
+                    </div>
+                    <i class="show-more"></i>
+                </div>
+                <div class="friend">
+                    <div class="friend-info">
+                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 2" class="friend-avatar">
+                        <span class="friend-name">Trần Thị B</span>
+                    </div>
+                    <i class="show-more"></i>
+                </div>
+                <div class="friend">
+                    <div class="friend-info">
+                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 3" class="friend-avatar">
+                        <span class="friend-name">Lê Văn C</span>
+                    </div>
+                    <i class="show-more"></i>
+                </div>
+                <div class="friend">
+                    <div class="friend-info">
+                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 4" class="friend-avatar">
+                        <span class="friend-name">Nguyễn Thị D</span>
+                    </div>
+                    <i class="show-more"></i>
+                </div>
 
-        </div>
-</body>
+
+            </div>
+    </body>
 </html>
