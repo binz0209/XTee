@@ -11,15 +11,25 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <style>
+
             .body {
                 font-family: Arial, sans-serif;
-                background-color: #ffffff;
+                background-color: #f0f0f0;
                 margin: 0;
                 padding: 0;
             }
-
-
             .container{
+                width: 60%; /* Giới hạn chiều rộng container */
+                margin: 40px auto; /* Căn giữa container với khoảng cách trên và dưới */
+                padding: 20px;
+                background-color: #fff; /* Màu nền trắng của container */
+                border-radius: 15px; /* Bo tròn các góc */
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+
+
+            .member-info{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -28,15 +38,17 @@
                 width: 100%; /* Đảm bảo container chiếm toàn bộ chiều ngang */
                 padding: 20px;
                 box-sizing: border-box;
-/*                background-color: #fff;  Nền trắng để nổi bật 
-                border-radius: 15px;  Bo tròn các góc 
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  Bóng đổ nhẹ tạo hiệu ứng nổi */
+                /*                background-color: #fff;  Nền trắng để nổi bật 
+                                border-radius: 15px;  Bo tròn các góc 
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  Bóng đổ nhẹ tạo hiệu ứng nổi */
 
             }
             .profile-header {
                 display: flex;
                 align-items: center;
                 margin-bottom: 50px;
+                width: 50%;
+                margin-left: 25%;
             }
 
             .profile-header .profile-pic {
@@ -77,28 +89,40 @@
                 align-items: center; /* Canh giữa các phần tử theo chiều dọc */
                 gap: 10px; /* Khoảng cách giữa các cột */
             }
-            .show-more{
-                background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/_xO7nhjX4UX.png");
-                background-position: 0px -100px;
-                background-size: auto;
-                width: 24px;
-                height: 24px;
-                background-repeat: no-repeat;
-                display: inline-block;
-            }
+
             .logout-row{
                 display: flex;
                 justify-content: flex-end;
-                width: 50%;
+                width: 30%;
 
             }
+            
+            .btn-logout,.btn-change {
+                background-color: #808080; /* Màu nền xám */
+                color: white; /* Màu chữ trắng */
+                padding:  3px 5px; /* Khoảng cách bên trong nút */
+                border: none; /* Bỏ viền mặc định */
+                border-radius: 5px; /* Bo tròn góc cho nút */
+                cursor: pointer; /* Thay đổi con trỏ khi hover */
+                font-size: 10px; /* Kích thước chữ */
+                font-weight: bold; /* In đậm chữ */
+                transition: background-color 0.3s, box-shadow 0.3s; /* Hiệu ứng khi hover */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ cho nút */
+            }
+
+            .btn-logout,.btn-change:hover {
+                background-color: #696969; /* Màu nền khi hover */
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
+            }
+
+            .btn-logout,.btn-change:active {
+                background-color: #585858; /* Màu nền khi bấm giữ */
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Bóng đổ khi bấm giữ */
+                transform: translateY(2px); /* Hiệu ứng nhấn xuống */
+            }
             .btn-logout{
-                background-color: red; /* Màu nền của button */
-                color: white; /* Màu chữ */
-                padding: 10px 20px;
-                border: none;
-                border-radius: 5px; /* Làm bo góc cho button */
-                cursor: pointer;
+                padding:  10px 13px;
+                background-color: #c82333;
             }
 
         </style>
@@ -113,33 +137,36 @@
                 <div class="profile-info">
                     <h2>Nguyen Xuan Hung</h2>
                 </div>
+                <div class="logout-row">
+                    <input type="submit" value="Log out" class="btn-logout"/>
+                </div>
             </div>
-            <div class="info">
-                <b>Birthday: </b>
-                <i class="show-more"></i>
-            </div>
-            <div class="info">
-                <b>Address: </b>
-                <i class="show-more"></i>
-            </div>
-            <div class="info">
-                <b>Phone Number: </b>
-                <i class="show-more"></i>
-            </div>
-            <div class="info">
-                <b>Email: </b>
-                <i class="show-more"></i>
-            </div>
-            <div class="info">
-                <b>Username: </b>
-                <i class="show-more"></i>
-            </div>
-            <div class="info">
-                <b>Password: </b>
-                <i class="show-more"></i>
-            </div>
-            <div class="logout-row">
-                <input type="submit" value="Log out" class="btn-logout"/>
+            <div class="member-info">
+                <div class="info">
+                    <b>Birthday: </b>
+                    <input type="submit" value="Change" class="btn-change"/>
+                </div>
+                <div class="info">
+                    <b>Address: </b>
+                    <input type="submit" value="Change" class="btn-change"/>
+                </div>
+                <div class="info">
+                    <b>Phone Number: </b>
+                    <input type="submit" value="Change" class="btn-change"/>
+                </div>
+                <div class="info">
+                    <b>Email: </b>
+                    <input type="submit" value="Change" class="btn-change"/>
+                </div>
+                <div class="info">
+                    <b>Username: </b>
+                    <input type="submit" value="Change" class="btn-change"/>
+                </div>
+                <div class="info">
+                    <b>Password: </b>
+                    <input type="submit" value="Change" class="btn-change"/>
+                </div>
+
             </div>
         </div>
 
