@@ -96,8 +96,8 @@
                 width: 30%;
 
             }
-            
-            .btn-logout,.btn-change {
+
+            .btn-logout,.btn-confirm {
                 background-color: #808080; /* Màu nền xám */
                 color: white; /* Màu chữ trắng */
                 padding:  3px 5px; /* Khoảng cách bên trong nút */
@@ -110,12 +110,12 @@
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bóng đổ cho nút */
             }
 
-            .btn-logout,.btn-change:hover {
+            .btn-logout,.btn-confirm:hover {
                 background-color: #696969; /* Màu nền khi hover */
                 box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Tăng bóng đổ khi hover */
             }
 
-            .btn-logout,.btn-change:active {
+            .btn-logout,.btn-confirm:active {
                 background-color: #585858; /* Màu nền khi bấm giữ */
                 box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Bóng đổ khi bấm giữ */
                 transform: translateY(2px); /* Hiệu ứng nhấn xuống */
@@ -123,6 +123,12 @@
             .btn-logout{
                 padding:  10px 13px;
                 background-color: #c82333;
+            }
+            .btn-confirm{
+                 padding:  13px 30px;
+                 font-size: 12px;
+                 margin-left:  47%;
+                 
             }
 
         </style>
@@ -143,30 +149,14 @@
             </div>
             <div class="member-info">
                 <div class="info">
-                    <b>Birthday: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
+                    <b>Old Password: </b>
                 </div>
                 <div class="info">
-                    <b>Address: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
+                    <b>New Password: </b>
                 </div>
-                <div class="info">
-                    <b>Phone Number: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Email: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Username: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Password: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-
+            </div>
+            <div>
+                <input type="submit" value="Confirm" class="btn-confirm"/>
             </div>
         </div>
 
