@@ -12,6 +12,29 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+
+        <div class="info">
+            <div class="birthday">
+                <b>Birthday: </b>
+            </div>
+            <div class="address">
+                <b>Address: </b>
+            </div>
+            <div class="phone">
+                <b>Phone Number: </b>
+            </div>
+            <div class="enmail">
+                <b>Email: </b>
+            </div>
+            <div class="user">
+                <b>Username: </b>
+            </div>
+            <div class="pass">
+                <b>Password: </b>
+            </div>
+        </div>
+
+
+
     </body>
 </html>
