@@ -134,6 +134,7 @@
 
             .post {
                 margin-bottom: 20px;
+
             }
 
             .post textarea {
@@ -141,6 +142,9 @@
                 padding: 10px;
                 border-radius: 5px;
                 border: 1px solid #ccc;
+            }
+            .caption{
+                margin-left: 37%;
             }
 
             .post img {
@@ -160,11 +164,64 @@
                 background-color: lightgray;
                 margin-top: 20px;
             }
+            
             .comment{
                 margin-left: 35%;
             }
+            .showmore{
+                background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/_xO7nhjX4UX.png");
+                background-position: 0px -100px;
+                background-size: auto;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                display: inline-block;
+            }
+            .post-comment {
+                display: flex;
+                justify-content: space-between; /* Chia đều khoảng cách giữa các thành phần con */
+                align-items: center; /* Canh giữa các phần tử theo chiều dọc */
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                background-color: #f9f9f9;
+                margin-top: 10px;
+                width:40%;
+                margin-left: 29%;
+            }
+
+            .post-comment-content {
+                display: flex;
+                flex-direction: column; /* Để các phần tử bên trong xếp dọc */
+                width: 80%;
+            }
 
 
+            .comment {
+                margin-top: 3px;
+                margin-left: 75px;
+            }
+
+            .post-comment-showmore {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end; /* Canh phải phần "showmore" và "time" */
+            }
+
+            .time {
+                font-size: 12px;
+                color: #777;
+            }
+
+            .show-more {
+                background-image: url("https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/_xO7nhjX4UX.png");
+                background-position: 0px -100px;
+                background-size: auto;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                display: inline-block;
+            }
         </style>
     </head>
     <body>
@@ -179,6 +236,9 @@
                         <h2>Nguyen Xuan Hung</h2>
                     </div>
                 </div>
+                <div class="caption">
+                    Yummyyy!
+                </div>
                 <div class="pictures" contenteditable="true" style="position: relative;">
                     <div class="picture-box" style="position: relative; ">
                         <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" style="width: 410px; height: 380px; object-fit: cover">
@@ -192,7 +252,7 @@
             </div>
             <div class="post-comment">
                 <div class="post-comment-content">
-                    <div class="profile-header">
+                    <div class="profile-header" style="margin-left: 5px">
                         <div class="profile-pic">
                             <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
                         </div>
@@ -210,7 +270,7 @@
                         2 minitues ago
                     </div>
                     <div class="showmore">
-                        
+                        <i class="show-more"></i>
                     </div>
                 </div>
             </div>
