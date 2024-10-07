@@ -9,13 +9,16 @@
         </group>
         <group name="PRO192Class">
             <file>file:/D:/XTee_Project/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/nbproject/private/private.xml</file>
             <file>file:/D:/XTee_Project/XTee/web/WEB-INF/web.xml</file>
             <file>file:/D:/XTee_Project/XTee/src/java/utils/DBConnection.java</file>
             <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_auditlog.jsp</file>
             <file>file:/D:/XTee_Project/XTee/web/views/member/login.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/nbproject/private/private.properties</file>
             <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_ads.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_ads_details.jsp</file>
             <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_user.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_content.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_report.jsp</file>
         </group>
     </open-files>
 </project-private>
