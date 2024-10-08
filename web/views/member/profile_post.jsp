@@ -17,20 +17,32 @@
         <!-- Font Awesome for icons -->
         <link href="assets/css/style.css" rel="stylesheet"/>
         <style>
+            html,
             body {
-                font-family: Arial, sans-serif;
-                background-color: #ffffff;
+                height: 100%;
                 margin: 0;
                 padding: 0;
+                font-family: Arial, sans-serif;
+                background-color: #f8f9fa;
             }
 
-            header {
-                background-color: #FFDA5A;
+            .flex-container {
                 display: flex;
-                align-items: center;
-                padding: 10px 20px;
-                justify-content: space-between;
-                height: 125px;
+                /* Sử dụng Flexbox */
+                height: 100%;
+                /* Chiều cao của container */
+            }
+
+            h1 {
+                color: #343a40;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .content-container {
+                flex: 1;
+                padding: 20px;
+                overflow-y: auto;
             }
 
             .logo {
@@ -232,94 +244,88 @@
             }
         </style>
     </head>
-    <body>
-        <div class="content-container">
-            <header>
-                <div class="logo">
-                    <a href="#">
-                        <img src="/XTee/assets/images/Logo_PNG_Ngang_1_Stroke.png" alt="XTEE Logo" style="height: 40px;">
-                    </a>
-                </div>
-                <div class="search-container">
-                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="m19.6 21l-6.3-6.3q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5t1.888-4.612T9.5 3t4.613 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l6.3 6.3zM9.5 14q1.875 0 3.188-1.312T14 9.5t-1.312-3.187T9.5 5T6.313 6.313T5 9.5t1.313 3.188T9.5 14"/>
-                    </svg>
-                    <input type="text" class="search-bar" placeholder="Search users...">
-                </div>
+<body>
+    <div>
+        <div>
+            <!-- Gọi header -->
+            <jsp:include page="../common/header_member.jsp" />
         </div>
-    </header>
-
-    <div class="profile-container">
-        <div class="profile-header">
-            <div class="profile-pic">
-                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
-            </div>
-            <div class="profile-info">
-                <h2>Nguyen Xuan Hung</h2>
-                <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
-            </div>
-            <div class="actions">
-                <button class="edit-profile">
-                    <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
-                </button>
-                <button class="ads-service">
-                    <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
-                </button>
-            </div>
-        </div>
-
-        <div class="tabs">
-            <a href="#" class="active"><b>Posts</b></a>
-            <a href="#">Friends</a>
-            <a href="#">Pictures</a>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="intro-section col-3" style="position: relative; left: 79px; top: 1px;">
-            <h3>INTRODUCTION</h3>
-            <p style="position: relative; left: 30px; top: 5px;">
-                <i class="fa fa-home"></i>
-                <span class="ic-home" style="position: relative; left: -20px; top: -5px " contenteditable="true"></span>Live in Da Nang</p>
-            <p style="position: relative; left: 30px;">
-                <i class="fa fa-birthday-cake"></i>
-                <span class="ic-cake" style="position: relative; left: -20px; top: 5px"></span>6/9/2010</p>
-            <p style="position: relative; left: 30px;">
-                <i class="fa fa-male"></i>
-                <span class="ic-gender" style="position: relative; left: -20px; top: 5px"></span>Male</p>
-        </div>
-
-        <!-- Post Section -->
-        <div class="post-container">
-            <div class="posting" style="display: flex; align-items: center; padding: 15px; background-color: #f0f0f0; border-radius: 10px; border: 1px solid #ccc; width: 900px">
-                <!-- Avatar -->
-                <div class="avatar" style="flex-shrink: 0;">
-                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
-                </div>
-                <!-- Textarea -->
-                <textarea placeholder="What did you eat today?" class="form-control" style="margin-left: 10px; background-color: #e5e5e5; border: none; padding: 10px; border-radius: 20px; width: 100%; height: 50px; resize: none;"></textarea>
-            </div>
-
-            <div class="post-profile" style="background-color: #f0f0f0; border-radius: 10px; padding: 15px; border: 1px solid #ccc; width: 900px; margin-top: 30px">
-                <!-- Phần bài đăng -->
-                <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                    <!-- Avatar -->
-                    <div class="avatar" style="flex-shrink: 0;">
-                        <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
+        <div class="flex-container">
+            <div class="content-container">
+                <div class="profile-container">
+                    <div class="profile-header">
+                        <div class="profile-pic">
+                            <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
+                        </div>
+                        <div class="profile-info">
+                            <h2>Nguyen Xuan Hung</h2>
+                            <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
+                        </div>
+                        <div class="actions">
+                            <button class="edit-profile">
+                                <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
+                            </button>
+                            <button class="ads-service">
+                                <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
+                            </button>
+                        </div>
                     </div>
-                    <!-- Tên người đăng và nội dung -->
-                    <div style="margin-left: 10px;">
-                        <p style="margin: 0; font-weight: bold; color: #000;">NgXuanHung</p>
-                        <p style="margin: 0; color: #555;">Yummy</p>
+
+                    <div class="tabs">
+                        <a href="#" class="active"><b>Posts</b></a>
+                        <a href="#">Friends</a>
+                        <a href="#">Pictures</a>
                     </div>
                 </div>
-                <!-- Hình ảnh của bài đăng -->
-                <img src="${pageContext.request.contextPath}/assets/images/food.jpg" alt="Food" class="img-fluid" style="width: 100%; border-radius: 10px;">
-            </div>
-        </div>
 
+                <div class="container">
+                    <div class="intro-section col-3" style="position: relative; left: 79px; top: 1px;">
+                        <h3>INTRODUCTION</h3>
+                        <p style="position: relative; left: 30px; top: 5px;">
+                            <i class="fa fa-home"></i>
+                            <span class="ic-home" style="position: relative; left: -20px; top: -5px " contenteditable="true"></span>Live in Da Nang</p>
+                        <p style="position: relative; left: 30px;">
+                            <i class="fa fa-birthday-cake"></i>
+                            <span class="ic-cake" style="position: relative; left: -20px; top: 5px"></span>6/9/2010</p>
+                        <p style="position: relative; left: 30px;">
+                            <i class="fa fa-male"></i>
+                            <span class="ic-gender" style="position: relative; left: -20px; top: 5px"></span>Male</p>
+                    </div>
+
+                    <!-- Post Section -->
+                    <div class="post-container">
+                        <div class="posting" style="display: flex; align-items: center; padding: 15px; background-color: #f0f0f0; border-radius: 10px; border: 1px solid #ccc; width: 900px">
+                            <!-- Avatar -->
+                            <div class="avatar" style="flex-shrink: 0;">
+                                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+                            </div>
+                            <!-- Textarea -->
+                            <textarea placeholder="What did you eat today?" class="form-control" style="margin-left: 10px; background-color: #e5e5e5; border: none; padding: 10px; border-radius: 20px; width: 100%; height: 50px; resize: none;"></textarea>
+                        </div>
+
+                        <div class="post-profile" style="background-color: #f0f0f0; border-radius: 10px; padding: 15px; border: 1px solid #ccc; width: 900px; margin-top: 30px">
+                            <!-- Phần bài đăng -->
+                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                <!-- Avatar -->
+                                <div class="avatar" style="flex-shrink: 0;">
+                                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
+                                </div>
+                                <!-- Tên người đăng và nội dung -->
+                                <div style="margin-left: 10px;">
+                                    <p style="margin: 0; font-weight: bold; color: #000;">NgXuanHung</p>
+                                    <p style="margin: 0; color: #555;">Yummy</p>
+                                </div>
+                            </div>
+                            <!-- Hình ảnh của bài đăng -->
+                            <img src="${pageContext.request.contextPath}/assets/images/food.jpg" alt="Food" class="img-fluid" style="width: 100%; border-radius: 10px;">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
     </div>
-</div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
