@@ -68,7 +68,10 @@
         width: 100%; 
         height: auto; 
         margin-bottom: 10px;
-        transform: scaleX(-1); /* Lật ngang video */
+    }
+    
+    .camera-preview {
+        transform: scaleX(-1);
     }
 
     .camera-buttons {
