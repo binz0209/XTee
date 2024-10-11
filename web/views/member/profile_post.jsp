@@ -66,6 +66,7 @@
                 background: #fff;
                 padding: 20px;
                 border-radius: 10px;
+                border: 2px solid #000000;
             }
 
             .profile-header {
@@ -145,6 +146,7 @@
                 margin: 0;
                 width: 200px;
                 float: left;
+                border: 2px solid #000000;
             }
 
             .post-container {
@@ -152,8 +154,9 @@
                 padding: 15px;
                 border-radius: 5px;
                 margin: 20px;
-                width: 75%;
+                max-width: 1000px;
                 float: right;
+                border: 2px solid #000000;
             }
 
             .post {
@@ -186,7 +189,7 @@
                 -webkit-mask-size: 100% 100%;
                 mask-size: 100% 100%;
             }
-            
+
             .speaker {
                 display: inline-block;
                 width: 1em;
@@ -200,7 +203,7 @@
                 -webkit-mask-size: 100% 100%;
                 mask-size: 100% 100%;
             }
-            
+
             .ic-home {
                 display: inline-block;
                 width: 1.5em;
@@ -214,7 +217,7 @@
                 -webkit-mask-size: 100% 100%;
                 mask-size: 100% 100%;
             }
-            
+
             .ic-cake {
                 display: inline-block;
                 width: 1.5em;
@@ -228,7 +231,7 @@
                 -webkit-mask-size: 100% 100%;
                 mask-size: 100% 100%;
             }
-            
+
             .ic-gender {
                 display: inline-block;
                 width: 1.5em;
@@ -244,90 +247,90 @@
             }
         </style>
     </head>
-<body>
-    <div>
+    <body>
         <div>
-            <!-- Gọi header -->
-            <jsp:include page="../common/header_member.jsp" />
-        </div>
-        <div class="flex-container">
-            <div class="content-container">
-                <div class="profile-container">
-                    <div class="profile-header">
-                        <div class="profile-pic">
-                            <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
-                        </div>
-                        <div class="profile-info">
-                            <h2>Nguyen Xuan Hung</h2>
-                            <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
-                        </div>
-                        <div class="actions">
-                            <button class="edit-profile">
-                                <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
-                            </button>
-                            <button class="ads-service">
-                                <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="tabs">
-                        <a href="#" class="active"><b>Posts</b></a>
-                        <a href="#">Friends</a>
-                        <a href="#">Pictures</a>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="intro-section col-3" style="position: relative; left: 79px; top: 1px;">
-                        <h3>INTRODUCTION</h3>
-                        <p style="position: relative; left: 30px; top: 5px;">
-                            <i class="fa fa-home"></i>
-                            <span class="ic-home" style="position: relative; left: -20px; top: -5px " contenteditable="true"></span>Live in Da Nang</p>
-                        <p style="position: relative; left: 30px;">
-                            <i class="fa fa-birthday-cake"></i>
-                            <span class="ic-cake" style="position: relative; left: -20px; top: 5px"></span>6/9/2010</p>
-                        <p style="position: relative; left: 30px;">
-                            <i class="fa fa-male"></i>
-                            <span class="ic-gender" style="position: relative; left: -20px; top: 5px"></span>Male</p>
-                    </div>
-
-                    <!-- Post Section -->
-                    <div class="post-container">
-                        <div class="posting" style="display: flex; align-items: center; padding: 15px; background-color: #f0f0f0; border-radius: 10px; border: 1px solid #ccc; width: 900px">
-                            <!-- Avatar -->
-                            <div class="avatar" style="flex-shrink: 0;">
-                                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
+            <div>
+                <!-- Gọi header -->
+                <jsp:include page="../common/header_member.jsp" />
+            </div>
+            <div class="flex-container">
+                <div class="content-container">
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <div class="profile-pic">
+                                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
                             </div>
-                            <!-- Textarea -->
-                            <textarea placeholder="What did you eat today?" class="form-control" style="margin-left: 10px; background-color: #e5e5e5; border: none; padding: 10px; border-radius: 20px; width: 100%; height: 50px; resize: none;"></textarea>
+                            <div class="profile-info">
+                                <h2>Nguyen Xuan Hung</h2>
+                                <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
+                            </div>
+                            <div class="actions">
+                                <button class="edit-profile">
+                                    <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
+                                </button>
+                                <button class="ads-service">
+                                    <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
+                                </button>
+                            </div>
                         </div>
 
-                        <div class="post-profile" style="background-color: #f0f0f0; border-radius: 10px; padding: 15px; border: 1px solid #ccc; width: 900px; margin-top: 30px">
-                            <!-- Phần bài đăng -->
-                            <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                        <div class="tabs">
+                            <a href="#" class="active"><b>Posts</b></a>
+                            <a href="#">Friends</a>
+                            <a href="#">Pictures</a>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="intro-section" style="position: relative; left: 79px; top: 1px;">
+                            <h3>INTRODUCTION</h3>
+                            <p style="position: relative; left: 30px; top: 5px;">
+                                <i class="fa fa-home"></i>
+                                <span class="ic-home" style="position: relative; left: -20px; top: -5px " contenteditable="true"></span>Live in Da Nang</p>
+                            <p style="position: relative; left: 30px;">
+                                <i class="fa fa-birthday-cake"></i>
+                                <span class="ic-cake" style="position: relative; left: -20px; top: 5px"></span>6/9/2010</p>
+                            <p style="position: relative; left: 30px;">
+                                <i class="fa fa-male"></i>
+                                <span class="ic-gender" style="position: relative; left: -20px; top: 5px"></span>Male</p>
+                        </div>
+
+                        <!-- Post Section -->
+                        <div class="post-container" style="position: relative; left: -392px; top: -9px; width: 1095px; transition: none;">
+                            <div class="posting" style="display: flex; align-items: center; padding: 15px; background-color: rgb(240, 240, 240); border-radius: 10px; border: 1px solid rgb(204, 204, 204); width: 900px; position: relative; left: 35px; top: 4px;">
                                 <!-- Avatar -->
                                 <div class="avatar" style="flex-shrink: 0;">
-                                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
+                                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 50px; height: 50px; border-radius: 50%;">
                                 </div>
-                                <!-- Tên người đăng và nội dung -->
-                                <div style="margin-left: 10px;">
-                                    <p style="margin: 0; font-weight: bold; color: #000;">NgXuanHung</p>
-                                    <p style="margin: 0; color: #555;">Yummy</p>
-                                </div>
+                                <!-- Textarea -->
+                                <textarea placeholder="What did you eat today?" class="form-control" style="margin-left: 10px; background-color: #e5e5e5; border: none; padding: 10px; border-radius: 20px; width: 100%; height: 50px; resize: none;"></textarea>
                             </div>
-                            <!-- Hình ảnh của bài đăng -->
-                            <img src="${pageContext.request.contextPath}/assets/images/food.jpg" alt="Food" class="img-fluid" style="width: 100%; border-radius: 10px;">
-                        </div>
-                    </div>
 
+                            <div class="post-profile" style="background-color: rgb(240, 240, 240); border-radius: 10px; padding: 15px; border: 1px solid rgb(204, 204, 204); width: 900px; margin-top: 30px; position: relative; left: 35px; top: 4px;">
+                                <!-- Phần bài đăng -->
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <!-- Avatar -->
+                                    <div class="avatar" style="flex-shrink: 0;">
+                                        <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Avatar" style="width: 40px; height: 40px; border-radius: 50%;">
+                                    </div>
+                                    <!-- Tên người đăng và nội dung -->
+                                    <div style="margin-left: 10px;">
+                                        <p style="margin: 0; font-weight: bold; color: #000;">NgXuanHung</p>
+                                        <p style="margin: 0; color: #555;">Yummy</p>
+                                    </div>
+                                </div>
+                                <!-- Hình ảnh của bài đăng -->
+                                <img src="${pageContext.request.contextPath}/assets/images/food.jpg" alt="Food" class="img-fluid" style="width: 100%; border-radius: 10px;">
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
-            
         </div>
-    </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
 </html>
