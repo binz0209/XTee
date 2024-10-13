@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -12,3 +13,44 @@
         </group>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/XTee/web/views/common/header_admindashboard.jsp</file>
+            <file>file:/D:/XTee/web/views/admin/admin_report.jsp</file>
+            <file>file:/D:/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/ACER/Desktop/XTee/web/views/admin/admin_user.jsp</file>
+            <file>file:/C:/Users/ACER/Desktop/XTee/web/views/member/login.jsp</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/ACER/Desktop/XTee/web/views/member/Notification.jsp</file>
+            <file>file:/C:/Users/ACER/Desktop/XTee/web/views/member/PictureList.jsp</file>
+            <file>file:/C:/Users/ACER/Desktop/XTee/web/views/member/ProfilePost.jsp</file>
+        </group>
+        <group name="PRO192Class">
+            <file>file:/D:/XTee_Project/XTee/nbproject/private/private.xml</file>
+            <file>file:/D:/XTee_Project/XTee/web/WEB-INF/web.xml</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/login.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/profile_post.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_ads_details.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/picture_list.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/common/header_member.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/homepage.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/utils/DBConnection.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_auditlog.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/nbproject/private/private.properties</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/common/header_admindashboard.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_ads.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_user.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/common/posting_popup.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_report.jsp</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> AnPV
