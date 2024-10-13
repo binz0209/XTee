@@ -8,7 +8,10 @@
             <file>file:/D:/XTee_Project/XTee/web/views/member/login.jsp</file>
         </group>
         <group>
-            <file>file:/D:/XTee/web/views/common/header_member.jsp</file>
+            <file>file:/D:/XTee/web/assets/js/bootstrap.bundle.min.js</file>
+            <file>file:/D:/XTee/web/views/member/setting.jsp</file>
+            <file>file:/D:/XTee/src/java/controller/AdminAuditLogServlet.java</file>
+            <file>file:/D:/XTee/web/views/member/login.jsp</file>
             <file>file:/D:/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
         </group>
     </open-files>
