@@ -119,28 +119,12 @@
         </div>
         <div class="flex-container">
             <div class="content-container">
-                <div class="new-post">
-                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="User Logo" class="logo">
-                    <textarea id="post-textarea" placeholder="What did you eat today?"></textarea>
-                </div>
+                <!-- Include newpost -->
+                <jsp:include page="../common/new_post.jsp" />
     
-                <div class="post-section">
-                    <div class="post">
-                        <div class="post-header">
-                            <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="User Logo" class="logo">
-                            <a href="${pageContext.request.contextPath}/views/member/profile_post.jsp">NgXuanHung</a>
-                        </div>
-                        <div class="post-content">
-                            <p>Yummy</p>
-                            <img src="assets/images/your_image1.png" alt="Food Image" />
-                            <div class="post-action">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M15 8C8.925 8 4 12.925 4 19c0 11 13 21 20 23.326C31 40 44 30 44 19c0-6.075-4.925-11-11-11c-3.72 0-7.01 1.847-9 4.674A10.99 10.99 0 0 0 15 8"/></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 21a9 9 0 1 0-9-9c0 1.488.36 2.891 1 4.127L3 21l4.873-1c1.236.64 2.64 1 4.127 1"/></svg>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24"><path fill="currentColor" d="m21.707 11.293l-8-8A1 1 0 0 0 12 4v3.545A11.015 11.015 0 0 0 2 18.5V20a1 1 0 0 0 1.784.62a11.46 11.46 0 0 1 7.887-4.049c.05-.006.175-.016.329-.026V20a1 1 0 0 0 1.707.707l8-8a1 1 0 0 0 0-1.414M14 17.586V15.5a1 1 0 0 0-1-1c-.255 0-1.296.05-1.562.085a14 14 0 0 0-7.386 2.948A9.013 9.013 0 0 1 13 9.5a1 1 0 0 0 1-1V6.414L19.586 12Z"/></svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
+                <!-- Include post content -->
+                <jsp:include page="../common/post_content.jsp" />
             </div>
         </div>
     

@@ -72,12 +72,12 @@
         <div class="header">
             <img class="logo" src="../../assets/images/Logo_PNG_Ngang_1.png" width="5%" alt="alt"/>
             <div class="header-right">
-                <a href="#home">
+                <a href="../member/homepage.jsp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28px" viewBox="0 0 24 24">
                     <path fill="currentColor" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.223a1 1 0 0 1 1.228 0l8 6.223a1 1 0 0 1 .386.79zm-2-1V9.978l-7-5.444l-7 5.444V19z"/>
                     </svg>
                 </a>
-                <a href="#contact">
+                <a href="../member/profile_post.jsp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28px" viewBox="0 0 24 24">
                     <g fill="none" stroke="currentColor" stroke-width="2.5">
                     <path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/>
@@ -90,7 +90,7 @@
                     <path fill="currentColor" d="M25 10H7a3.003 3.003 0 0 0-3 3v6a2 2 0 0 0 2 2v7a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V16h-2v12H8v-9H6v-6a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v6h-2v9h-4V16h-2v12a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-7a2 2 0 0 0 2-2v-6a3.003 3.003 0 0 0-3-3M10 9a4 4 0 1 1 4-4a4.004 4.004 0 0 1-4 4m0-6a2 2 0 1 0 2 2a2 2 0 0 0-2-2m12 6a4 4 0 1 1 4-4a4.004 4.004 0 0 1-4 4m0-6a2 2 0 1 0 2 2a2 2 0 0 0-2-2"/>
                     </svg>
                 </a>
-                <a href="#message">
+                <a href="../member/message_page.jsp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="28px" viewBox="0 0 24 24">
                     <path fill="none" stroke="currentColor" stroke-width="1.5" d="M3 20.29V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H7.961a2 2 0 0 0-1.561.75l-2.331 2.914A.6.6 0 0 1 3 20.29Z"/>
                     </svg>
