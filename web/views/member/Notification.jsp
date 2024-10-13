@@ -98,7 +98,7 @@
 
             <!-- Sample Notification Items -->
             <div class="notification-item" data-date="2024-10-08">
-                <div class="notification-text">You have a new message from John.</div>
+                <div class="notification-text">You have a new message from Hung.</div>
                 <div class="notification-time">2 hours ago</div>
             </div>
             <div class="notification-item" data-date="2024-08-07">
