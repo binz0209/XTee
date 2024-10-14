@@ -1,54 +1,413 @@
-/* 
-    Created on : Sep 30, 2024, 3:16:28 AM
-    Author     : TuLinh
-*/
-
-/* style.css */
-
-/* Reset some default styles */
-body {
+/* General styles */
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
+    padding: 0;
+    font-family: 'Inter', sans-serif;
     background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 20px;
+h1 {
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.header-icons a {
-    text-decoration: none;
-    color: #007bff;
+.search-container {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.search-icon {
+    margin-right: 8px;
+}
+
+.filter-icon {
+    margin-left: 8px;
+}
+
+.search-bar {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+    border-radius: 30px;
+    width: 300px;
+    background-color: #D9D9D9;
+}
+
+.content-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Flex container */
+.flex-container {
+    display: flex; /* Sử dụng Flexbox để sắp xếp navbar và content */
+    height: calc(100vh - 60px); /* Đặt chiều cao toàn bộ viewport trừ chiều cao của header */
+}
+
+.ads-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.avatar-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
     margin-right: 15px;
 }
 
-.header-icons input[type="text"] {
-    width: 200px;
+.user-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.post-caption {
+    font-size: 1rem;
+    color: #343a40;
+}
+
+.ads-detail {
+    background-color: #CCE0AC; /* Màu nền cho từng báo cáo */
+    padding: 15px;
+    border-radius: 10px; /* Bo góc cho từng báo cáo */
+    margin: 10px 0; /* Khoảng cách giữa các báo cáo */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+}
+
+/* User info styles */
+.ads-user-info {
+    display: flex; /* Sử dụng flexbox để căn chỉnh nội dung */
+    justify-content: space-between; /* Căn đều không gian giữa các phần tử */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Đảm bảo chiếm toàn bộ chiều rộng */
+    margin-bottom: 15px;
+}
+
+.button-container {
+    display: flex; /* Sử dụng flexbox để đặt các nút sát nhau */
+    margin-left: auto; /* Đẩy button-container sang bên phải */
+}
+
+.btn {
+    margin-left: 10px; /* Khoảng cách giữa các nút */
+    padding: 8px 14px; /* Padding cho nút */
+    border: none; /* Bỏ viền */
+    border-radius: 15px; /* Bo góc 15 độ */
+    cursor: pointer; /* Hiển thị con trỏ khi hover */
+    border: 1px solid black; /* Viền đen cho nút */
+    color: black; /* Màu chữ đen cho nút */
+    font-size: 1.1rem;
+}
+
+.accept-btn {
+    background-color: #CCE0AC; /* Màu nền cho nút Accept */
+}
+
+.deny-btn {
+    background-color: #FF5E5E; /* Màu nền cho nút Deny */
+}
+
+.accepted {
+    color: #00BC32; /* Màu chữ cho nút Accepted */
+    background-color: transparent; /* Xóa màu nền */
+    border: none; /* Bỏ viền */
+}
+
+.denied {
+    color: #dc3545; /* Màu chữ cho nút Denied */
+    background-color: transparent; /* Xóa màu nền */
+    border: none; /* Bỏ viền */
+}
+
+.delete-btn {
+    background-color: #FFCCCB; /* Màu nền cho nút Delete */
+}
+
+/* Navbar styles */
+* {
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.sidebar {
+    width: 16.67%; /* Chiều rộng của sidebar */
+    background-color: #F1D57D; /* Màu nền cho sidebar */
+    padding: 0; /* Không có padding */
+    height: 100%; /* Chiều cao 100% */
+    display: flex; /* Sử dụng flexbox */
+    flex-direction: column; /* Sắp xếp các mục theo chiều dọc */
 }
 
 .nav {
-    min-height: 100vh;
+    list-style-type: none; /* Xóa dấu đầu dòng */
+    padding: 0; /* Xóa padding */
+    margin: 0; /* Xóa margin */
+    flex-grow: 1; /* Cho phép nav mở rộng */
+    width: 100%; /* Đảm bảo nav chiếm toàn bộ chiều rộng của sidebar */
+}
+
+.nav-item {
+    border-bottom: 1px solid #000000; /* Thêm đường viền giữa các mục */
+}
+
+.nav-link {
+    color: #000; /* Màu chữ của liên kết */
+    display: flex; /* Sử dụng flex để căn giữa nội dung */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    height: 50px; /* Đặt chiều cao cố định cho liên kết */
+    font-size: 18px; /* Tăng kích thước chữ */
+    text-align: center; /* Căn giữa văn bản */
+    background-color: #F0EAAC; /* Màu nền mặc định */
+    text-decoration: none; /* Xóa gạch chân */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển đổi mượt mà */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: #CCE0AC; /* Màu nền khi hover hoặc được chọn */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.logout-item {
+    margin-top: auto; /* Đẩy nút đăng xuất xuống cuối cùng */
+    border-top: 1px solid #CCE0AC; /* Đường viền phía trên nút đăng xuất */
+}
+
+.logout-icon {
+    margin-left: 8px; /* Space between text and icon */
+    width: 20px; /* Size of the icon */
+    height: 20px; /* Size of the icon */
+}
+
+
+/* AUDITLOG */
+
+
+/* Định dạng cho vùng chứa thông báo */
+.log-container {
+    background-color: #D9D9D9; /* Màu nền xám cho vùng thông báo */
+    padding: 20px; /* Khoảng cách bên trong */
+    margin: 20px auto; /* Tự động căn giữa */
+    width: 95%; /* Chiếm 95% chiều rộng */
+    max-width: 90%; /* Độ rộng tối đa */
+    border-radius: 5px; /* Bo tròn viền */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho vùng chứa */
+    display: flex; /* Sử dụng Flexbox */
+    flex-direction: column; /* Sắp xếp theo cột */
+    height: 90%; /* Chiếm toàn bộ chiều cao */
+}
+
+/* Định dạng cho vùng chứa tin nhắn */
+.log-messages {
+    flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
+    overflow-y: auto; /* Cuộn nếu nội dung vượt quá chiều cao */
+    padding-bottom: 20px; /* Khoảng cách dưới cùng */
+    margin-bottom: 15px; /* Khoảng cách giữa các thông báo */
+}
+
+/* Định dạng cho thời gian thông báo */
+.log-time {
+    font-weight: normal; /* Thay đổi thành thường */
+    font-size: 14px; /* Kích thước chữ nhỏ hơn cho thời gian */
+    color: #343a40; /* Màu chữ */
+    margin-bottom: 5px; /* Khoảng cách giữa thời gian và nội dung */
+}
+
+/* Định dạng cho nội dung thông báo */
+.log-event {
+    font-size: 16px; /* Kích thước chữ cho nội dung */
+    color: #343a40; /* Màu chữ */
+}
+
+.log-event strong {
+    font-weight: bold; /* In đậm tên người dùng */
+}
+
+/* Định dạng cho ngày */
+.log-date {
+    text-align: center; /* Căn giữa ngày */
+    font-size: 20px; /* Kích thước chữ cho ngày */
+    font-weight: bold; /* In đậm ngày */
+    margin: 20px 0; /* Khoảng cách dưới và trên cho ngày */
+}
+
+
+/*REPORT*/
+.report-post-container {
+    background-color: #ffffff;
     padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
-.table {
-    margin-top: 20px;
+.report-user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
-.table th, .table td {
-    text-align: center;
-}
-
-.table img {
+.report-avatar-img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
 }
 
-.dropdown-menu {
-    min-width: 200px;
+.report-post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.report-post-caption {
+    font-size: 1rem;
+    color: #343a40;
+}
+
+/* Table style */
+.no-report-users {
+    text-align: center;
+    padding: 20px;
+    color: #dc3545;
+}
+
+.report-container {
+    background-color: #CCE0AC;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/*ADMIN CONTENT*/
+.admin-post-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+
+/*ADMIN USER*/
+.admin-table {
+    width: 82.5%; /* Giảm chiều rộng của bảng xuống 82.5% */
+    margin: 0 auto; /* Căn giữa bảng trong trang */
+    border-collapse: collapse; /* Hợp nhất các đường viền */
+    background-color: #ffffff; /* Màu nền bảng */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng cho bảng */
+}
+.admin-table th, .admin-table td {
+    border: 1px solid #dee2e6; /* Đường viền cho ô */
+    padding: 8px; /* Giảm padding cho ô */
+    text-align: left; /* Căn trái cho văn bản */
+}
+.admin-table th {
+    background-color: #ffffff; /* Màu nền cho tiêu đề bảng */
+    color: black; /* Màu chữ cho tiêu đề bảng */
+}
+.admin-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+}
+.admin-table tr:hover {
+    background-color: #e9ecef; /* Màu nền khi hover vào hàng */
+}
+.no-users-found {
+    text-align: center; /* Căn giữa khi không có người dùng */
+    padding: 20px; /* Thêm padding */
+    color: #dc3545; /* Màu chữ thông báo không có người dùng */
+}
+.admin-avatar-img {
+    width: 50px; /* Chiều rộng của ảnh */
+    height: 50px; /* Chiều cao của ảnh */
+    border-radius: 50%; /* Để bo tròn ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+}
+.admin-table-nowrap td {
+    white-space: nowrap; /* Ngăn cản việc xuống dòng */
+}        
+.admin-modal {
+    position: absolute; /* Đặt vị trí của modal */
+    z-index: 1050; /* Đặt z-index đủ lớn */
+    display: none; /* Ẩn modal mặc định */
+    border: 1px solid #ccc; /* Viền cho modal */
+    background-color: white; /* Nền trắng cho modal */
+    padding: 10px; /* Giảm padding cho nội dung modal */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng cho modal */
+    border-radius: 8px; /* Bo góc cho modal */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển động */
+    opacity: 0; /* Đặt độ trong suốt ban đầu */
+    transform: translateY(-10px); /* Đưa modal lên một chút */
+    width: 200px; /* Thay đổi chiều rộng của modal */
+}
+
+.admin-modal.show {
+    display: block; /* Hiện modal khi có class "show" */
+    opacity: 1; /* Đặt độ trong suốt khi hiển thị */
+    transform: translateY(0); /* Trở lại vị trí ban đầu */
+}
+
+.admin-modal-header {
+    padding-bottom: 5px; /* Giảm khoảng cách dưới tiêu đề */
+}
+
+.admin-modal-title {
+    font-size: 1.1rem; /* Giảm kích thước chữ cho tiêu đề */
+}
+
+.admin-close {
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    font-size: 1.5rem; /* Kích thước chữ cho nút đóng */
+    color: #6c757d; /* Màu chữ cho nút đóng */
+}
+
+.admin-close:hover {
+    color: #dc3545; /* Đổi màu khi hover */
+}
+
+.admin-list-group {
+    list-style: none; /* Bỏ danh sách mặc định */
+    padding: 0; /* Xóa padding mặc định */
+    margin: 0; /* Xóa margin mặc định */
+}
+
+.admin-list-group-item {
+    padding: 10px 15px; /* Padding cho từng mục trong danh sách */
+    border-radius: 4px; /* Bo góc cho mục danh sách */
+    cursor: pointer; /* Con trỏ chuột khi hover */
+    transition: background-color 0.2s ease; /* Hiệu ứng chuyển động */
+}
+
+.admin-list-group-item:hover {
+    background-color: #f8f9fa; /* Màu nền khi hover */
 }

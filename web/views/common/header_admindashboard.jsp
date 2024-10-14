@@ -11,8 +11,10 @@
                 display: flex; /* Sử dụng flexbox để căn chỉnh */
                 align-items: center; /* Căn giữa theo chiều dọc */
                 padding: 10px; /* Thêm khoảng cách xung quanh */
+                height: 60px; /* Đặt chiều cao cố định cho header */
                 border-bottom: 1px solid #000000; /* Optional: Add border between items */
             }
+
             .logo {
                 margin-right: 20px; /* Thêm khoảng cách bên phải logo */
             }
@@ -47,7 +49,7 @@
     </head>
     <body>
         <div class="header">
-            <img class="logo" src="../../assets/images/Logo_PNG_Ngang_1.png" width="5%" alt="alt"/>
+            <img class="logo" src="${pageContext.request.contextPath}/assets/images/Logo_PNG_Ngang_1.png" width="5%" alt="alt"/>
             <div class="header-right">
                 <a class="active" href="#home"><svg xmlns="http://www.w3.org/2000/svg" width="28px" viewBox="0 0 24 24"><path fill="currentColor" d="M21 20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.49a1 1 0 0 1 .386-.79l8-6.223a1 1 0 0 1 1.228 0l8 6.223a1 1 0 0 1 .386.79zm-2-1V9.978l-7-5.444l-7 5.444V19z"/></svg></a>
                 <a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" width="28px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.5"><path stroke-linejoin="round" d="M4 18a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><circle cx="12" cy="7" r="3"/></g></svg></a>

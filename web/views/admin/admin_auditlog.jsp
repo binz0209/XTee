@@ -10,81 +10,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Advertisement Management</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        .flex-container {
-            display: flex; /* Sử dụng Flexbox */
-            height: 100%; /* Chiều cao của container */
-        }
-        h1 {
-            color: #343a40;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .content-container {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-        }
-        /* Định dạng cho vùng chứa thông báo */
-        .log-container {
-            background-color: #D9D9D9; /* Màu nền xám cho vùng thông báo */
-            padding: 20px; /* Khoảng cách bên trong */
-            margin: 20px auto; /* Tự động căn giữa */
-            width: 95%; /* Chiếm 95% chiều rộng */
-            max-width: 90%; /* Độ rộng tối đa */
-            border-radius: 5px; /* Bo tròn viền */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho vùng chứa */
-            display: flex; /* Sử dụng Flexbox */
-            flex-direction: column; /* Sắp xếp theo cột */
-            height: 90%; /* Chiếm toàn bộ chiều cao */
-        }
-
-        /* Định dạng cho vùng chứa tin nhắn */
-        .log-messages {
-            flex-grow: 1; /* Chiếm toàn bộ không gian còn lại */
-            overflow-y: auto; /* Cuộn nếu nội dung vượt quá chiều cao */
-            padding-bottom: 20px; /* Khoảng cách dưới cùng */
-        }
-
-        /* Định dạng cho từng thông báo */
-        .log-message {
-            margin-bottom: 15px; /* Khoảng cách giữa các thông báo */
-        }
-
-        /* Định dạng cho thời gian thông báo */
-        .log-time {
-            font-weight: normal; /* Thay đổi thành thường */
-            font-size: 14px; /* Kích thước chữ nhỏ hơn cho thời gian */
-            color: #343a40; /* Màu chữ */
-            margin-bottom: 5px; /* Khoảng cách giữa thời gian và nội dung */
-        }
-
-        /* Định dạng cho nội dung thông báo */
-        .log-event {
-            font-size: 16px; /* Kích thước chữ cho nội dung */
-            color: #343a40; /* Màu chữ */
-        }
-
-        .log-event strong {
-            font-weight: bold; /* In đậm tên người dùng */
-        }
-
-        /* Định dạng cho ngày */
-        .log-date {
-            text-align: center; /* Căn giữa ngày */
-            font-size: 20px; /* Kích thước chữ cho ngày */
-            font-weight: bold; /* In đậm ngày */
-            margin: 20px 0; /* Khoảng cách dưới và trên cho ngày */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
 </head>
 <body>
     <div>

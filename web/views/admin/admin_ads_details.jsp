@@ -4,75 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Advertisement Management</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-        h1 {
-            color: #343a40;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .content {
-            padding: 20px;
-            margin-left: 300px;
-        }
-        .header {
-            display: flex; /* Sử dụng Flexbox để sắp xếp các mục theo hàng ngang */
-            justify-content: space-around; /* Giãn cách đều các mục */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            margin-bottom: 20px; /* Khoảng cách dưới cho header */
-        }
-        .header div {
-            flex: 1; /* Để mỗi mục chiếm cùng một khoảng không gian */
-            text-align: center; /* Căn giữa văn bản trong mỗi mục */
-        }
-        .ad-details {
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .user-info {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .stats {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-            border: 1px solid #dee2e6; /* Đặt viền cho phần stats */
-            padding: 15px; /* Thêm khoảng cách bên trong khung */
-            border-radius: 10px; /* Bo góc cho khung */
-            background-color: #ffffff; /* Màu nền cho phần stats */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ cho khung */
-        }
-        .stats div {
-            text-align: center;
-        }
-        .post-image {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-        .avatar-img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 15px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
 </head>
 <body>
     <!-- Navbar -->
@@ -81,7 +15,7 @@
     <!-- Main Content -->
     <div class="content">
         <!-- Header Section -->
-        <div class="header">
+        <div class="header-ads-details">
             <div>
                 <p>Start date: <strong>01/09/2024</strong></p>
             </div>

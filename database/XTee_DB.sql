@@ -127,3 +127,70 @@ CREATE TABLE AuditLogs (
     actionTimestamp DATETIME DEFAULT GETDATE()
 );
 GO
+
+select * from Users;
+SELECT * FROM Posts;
+SELECT * FROM Messages;
+SELECT * FROM Ads;
+SELECT * FROM Friendships;
+SELECT * FROM Comments;
+SELECT * FROM Likes;
+SELECT * FROM Notifications;
+SELECT * FROM Reports;
+SELECT * FROM AuditLogs;
+
+-- Insert data into Posts table (sau khi đã có dữ liệu trong bảng Users)
+INSERT INTO Posts (userId, content, media, likes, comments, isAd)
+VALUES
+(5, 'Had a great meal today!', '/XTee/assets/images/post_1.jpg', 15, 3, 0),
+(5, 'Check out this recipe I found!', '/XTee/assets/images/post_2.jpg', 22, 5, 0),
+(5, 'New promotional post!', '/XTee/assets/images/post_3.jpg', 50, 12, 1);
+
+-- Insert data into Messages table
+INSERT INTO Messages (senderId, receiverId, content)
+VALUES
+(5, 7, 'Hey, how are you?'),
+(7, 5, 'I am good, thanks! What about you?');
+
+-- Insert data into Ads table
+INSERT INTO Ads (userId, postId, campaignName, startDate, endDate, adContent, adType, budget)
+VALUES
+(5, 4, 'Food Lovers Campaign', '2024-10-01', '2024-11-01', 'Check out this amazing dish!', 'Standard', 100.00),
+(7, 6, 'Recipe Sharing', '2024-10-05', '2024-11-05', 'Discover new recipes every day!', 'VIP', 500.00);
+
+
+-- Insert data into Friendships table
+INSERT INTO Friendships (userId1, userId2, status)
+VALUES
+(5, 7, 'Pending');
+
+-- Insert data into Comments table
+INSERT INTO Comments (postId, userId, commentText)
+VALUES
+(4, 5, 'That looks delicious!'),
+(5, 5, 'I need to try this recipe!');
+
+-- Insert data into Likes table
+INSERT INTO Likes (postId, userId)
+VALUES
+(4, 5),
+(5, 7);
+
+-- Insert data into Notifications table
+INSERT INTO Notifications (userId, triggeredByUserId, notificationType, postId)
+VALUES
+(5, 7, 'like', 5),
+(5, 7, 'comment', 6);
+
+-- Insert data into Reports table
+INSERT INTO Reports (postId, userId, reportReason)
+VALUES
+(6, 5, 'Inappropriate content'),
+(6, 5, 'Spam post');
+
+-- Insert data into AuditLogs table
+INSERT INTO AuditLogs (userId, actionType, targetPostId)
+VALUES
+(5, 'login', NULL),
+(5, 'post_created', 5),
+(5, 'post_deleted', 5);

@@ -12,140 +12,9 @@
 <head>
     <meta charset="UTF-8">
     <title>User Management</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-    <style>
-        html, body {
-            height: 100%; /* Đặt chiều cao cho html và body */
-            margin: 0; /* Xóa margin mặc định */
-            padding: 0; /* Xóa padding mặc định */
-            font-family: Arial, sans-serif; /* Đặt font chữ cho toàn bộ trang */
-            background-color: #f8f9fa; /* Màu nền sáng cho trang */
-        }
-        h1 {
-            color: #343a40; /* Màu chữ cho tiêu đề */
-            text-align: center; /* Căn giữa tiêu đề */
-            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
-        }
-        .search-container {
-            display: flex; /* Sử dụng Flexbox */
-            align-items: center; /* Căn giữa theo chiều dọc */
-            margin: 20px 0; /* Khoảng cách trên và dưới cho thanh tìm kiếm */
-        }
-        .search-icon {
-            margin-right: 8px; /* Khoảng cách bên phải của icon */
-        }
-        .filter-icon {
-            margin-left: 8px;
-        }
-        .search-bar {
-            padding: 8px; /* Padding cho thanh tìm kiếm */
-            border: 1px solid #dee2e6; /* Đường viền cho thanh tìm kiếm */
-            border-radius: 30px; /* Bo góc 30 độ cho thanh tìm kiếm */
-            width: 300px; /* Chiều rộng cho thanh tìm kiếm */
-            background-color: #D9D9D9; /* Màu nền cho thanh tìm kiếm */
-        }
-        table {
-            width: 82.5%; /* Giảm chiều rộng của bảng xuống 80% */
-            height: 7%;
-            margin: 0 auto; /* Căn giữa bảng trong trang */
-            border-collapse: collapse; /* Hợp nhất các đường viền */
-            background-color: #ffffff; /* Màu nền bảng */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm bóng cho bảng */
-        }
-        th, td {
-            border: 1px solid #dee2e6; /* Đường viền cho ô */
-            padding: 8px; /* Giảm padding cho ô */
-            text-align: left; /* Căn trái cho văn bản */
-        }
-        th {
-            background-color: #007bff; /* Màu nền cho tiêu đề bảng */
-            color: white; /* Màu chữ cho tiêu đề bảng */
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
-        }
-        tr:hover {
-            background-color: #e9ecef; /* Màu nền khi hover vào hàng */
-        }
-        .no-users {
-            text-align: center; /* Căn giữa khi không có người dùng */
-            padding: 20px; /* Thêm padding */
-            color: #dc3545; /* Màu chữ thông báo không có người dùng */
-        }
-        .avatar-img {
-            width: 50px; /* Chiều rộng của ảnh */
-            height: 50px; /* Chiều cao của ảnh */
-            border-radius: 50%; /* Để bo tròn ảnh */
-            object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
-        }
-        .table-nowrap td {
-            white-space: nowrap; /* Ngăn cản việc xuống dòng */
-        }        
-        .modal {
-            position: absolute; /* Đặt vị trí của modal */
-            z-index: 1050; /* Đặt z-index đủ lớn */
-            display: none; /* Ẩn modal mặc định */
-            border: 1px solid #ccc; /* Viền cho modal */
-            background-color: white; /* Nền trắng cho modal */
-            padding: 10px; /* Giảm padding cho nội dung modal */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Đổ bóng cho modal */
-            border-radius: 8px; /* Bo góc cho modal */
-            transition: opacity 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển động */
-            opacity: 0; /* Đặt độ trong suốt ban đầu */
-            transform: translateY(-10px); /* Đưa modal lên một chút */
-            width: 200px; /* Thay đổi chiều rộng của modal */
-        }
-
-        .modal.show {
-            display: block; /* Hiện modal khi có class "show" */
-            opacity: 1; /* Đặt độ trong suốt khi hiển thị */
-            transform: translateY(0); /* Trở lại vị trí ban đầu */
-        }
-
-        .modal-header {
-            padding-bottom: 5px; /* Giảm khoảng cách dưới tiêu đề */
-        }
-
-        .modal-title {
-            font-size: 1.1rem; /* Giảm kích thước chữ cho tiêu đề */
-        }
-
-        .close {
-            cursor: pointer; /* Con trỏ chuột khi hover */
-            font-size: 1.5rem; /* Kích thước chữ cho nút đóng */
-            color: #6c757d; /* Màu chữ cho nút đóng */
-        }
-
-        .close:hover {
-            color: #dc3545; /* Đổi màu khi hover */
-        }
-
-        .list-group {
-            list-style: none; /* Bỏ danh sách mặc định */
-            padding: 0; /* Xóa padding mặc định */
-            margin: 0; /* Xóa margin mặc định */
-        }
-
-        .list-group-item {
-            padding: 10px 15px; /* Padding cho từng mục trong danh sách */
-            border-radius: 4px; /* Bo góc cho mục danh sách */
-            cursor: pointer; /* Con trỏ chuột khi hover */
-            transition: background-color 0.2s ease; /* Hiệu ứng chuyển động */
-        }
-
-        .list-group-item:hover {
-            background-color: #f8f9fa; /* Màu nền khi hover */
-        }
-        .flex-container {
-            display: flex; /* Sử dụng Flexbox */
-            height: 100%; /* Chiều cao của container */
-        }
-        .content-container {
-            flex: 1; /* Content chiếm toàn bộ không gian còn lại */
-            padding: 20px; /* Khoảng cách bên trong */
-            overflow-y: auto; /* Cho phép cuộn dọc nếu nội dung vượt quá chiều cao */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
 </head>
 <body>
     <div>
@@ -168,14 +37,14 @@
                     </svg>
                 </div>
                 <div>
-                    <table class="table-nowrap">
+                    <table class="admin-table admin-table-nowrap"> <!-- Sử dụng lớp admin-table -->
                         <tr>
-                            <td style="text-align: center;">Id</td>
-                            <td style="text-align: center;">Avatar</td>
-                            <td style="text-align: center;">Role</td>
-                            <td style="text-align: center;">Full Name</td>
-                            <td style="text-align: center;">Username</td>
-                            <td style="text-align: center;">Join date</td>
+                            <th style="text-align: center;">Id</th>
+                            <th style="text-align: center;">Avatar</th>
+                            <th style="text-align: center;">Role</th>
+                            <th style="text-align: center;">Full Name</th>
+                            <th style="text-align: center;">Username</th>
+                            <th style="text-align: center;">Join date</th>
                         </tr>
                         <%
                             List<User> userList = (List<User>) request.getAttribute("userList");
@@ -187,7 +56,7 @@
                         <tr>
                             <td style="text-align: center;"><%= user.getId() %></td>
                             <td style="text-align: center;">
-                                <img src="<%= user.getAvatar() %>" class="avatar-img"> <!-- Hiển thị avatar -->
+                                <img src="<%= user.getAvatar() %>" class="admin-avatar-img"> <!-- Sử dụng lớp admin-avatar-img -->
                             </td>
                             <td style="text-align: center;"><%= user.getRole() %></td>
                             <td style="text-align: center;"><%= user.getFullName() %></td>
@@ -199,7 +68,7 @@
                         %>
                         <% } else { %>
                         <tr>
-                            <td colspan="6" class="no-users">No users found.</td> <!-- Thông báo không có người dùng -->
+                            <td colspan="6" class="no-users-found">No users found.</td> <!-- Thông báo không có người dùng -->
                         </tr>
                         <% } %>
                     </table>
