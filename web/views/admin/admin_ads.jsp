@@ -48,8 +48,8 @@
                             <button class="btn delete-btn" onclick="deleteAd(this)" style="display:none;">Delete</button>
                         </div>
                     </div>
-                    <p class="post-caption">Yummy</p>
-                    <img src="https://via.placeholder.com/600x300" alt="Post Image" class="post-image">
+                    <p class="admin-post-caption">Yummy</p>
+                    <img src="https://via.placeholder.com/600x300" alt="Post Image" class="admin-post-image">
                     <!-- Report List -->
                     <div>
                         <!-- Ads-Details -->

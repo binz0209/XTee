@@ -47,6 +47,48 @@ h1 {
     height: calc(100vh - 60px); /* Đặt chiều cao toàn bộ viewport trừ chiều cao của header */
 }
 
+
+/* HEADER ADMINDASHBOARD */
+.header-admindashboard {
+    overflow: hidden;
+    background-color: #FFDA5A;
+    display: flex; /* Sử dụng flexbox để căn chỉnh */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    padding: 10px; /* Thêm khoảng cách xung quanh */
+    height: 60px; /* Đặt chiều cao cố định cho header */
+    border-bottom: 1px solid #000000; /* Optional: Add border between items */
+}
+
+.header-admindashboard-logo {
+    margin-right: 20px; /* Thêm khoảng cách bên phải logo */
+}
+/* Style the header links */
+.header-admindashboard a {
+    color: black;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    margin-left: 10px; /* Thêm khoảng cách giữa các liên kết */
+}
+
+/* Change the background color on mouse-over */
+.header-admindashboard a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Float the link section to the right */
+.header-admindashboard-right {
+    margin-right: 20px;
+    margin-left: auto; /* Đẩy các liên kết sang bên phải */
+    display: flex; /* Sử dụng flexbox cho phần chứa các liên kết */
+    justify-content: flex-end; /* Căn giữa theo chiều ngang */
+    flex: 1; /* Chiếm toàn bộ không gian có sẵn */
+}
+
 .ads-container {
     background-color: #ffffff;
     padding: 15px;
@@ -71,19 +113,19 @@ h1 {
     margin-right: 15px;
 }
 
-.user-name {
+.admin-user-name {
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.post-image {
+.admin-post-image {
     width: 100%;
     height: auto;
     border-radius: 10px;
     margin-bottom: 15px;
 }
 
-.post-caption {
+.admin-post-caption {
     font-size: 1rem;
     color: #343a40;
 }
