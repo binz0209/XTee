@@ -11,26 +11,26 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Advertising Payment</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            .card {
+                background-color: #D9D9D9; 
+                border-radius: 15px;
+            }
+            .choose-button {
+                background-color: #FFDA5A; 
+                border: none; 
+                color: #000; 
+                padding: 10px 20px; 
+                font-size: 16px;
+                cursor: pointer; 
+                border-radius: 15px; 
+            }
+            .choose-button:hover {
+                background-color: #f0c74b; 
+            }
+
+        </style>
     </head>
-    <style>
-        .card {
-            background-color: #D9D9D9; 
-            border-radius: 15px;
-        }
-        .choose-button {
-            background-color: #FFDA5A; 
-            border: none; 
-            color: #000; 
-            padding: 10px 20px; 
-            font-size: 16px;
-            cursor: pointer; 
-            border-radius: 15px; 
-        }
-        .choose-button:hover {
-            background-color: #f0c74b; 
-        }
-        
-    </style>
     <body>
         <div class="container text-center mt-5">
             <h2 class="mt-5">Welcome to Xtee's customer advertising package payment gateway</h2>      
