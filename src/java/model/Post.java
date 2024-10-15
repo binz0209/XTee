@@ -1,31 +1,13 @@
 package model;
 
-import java.util.Date;
-
 public class Post {
     private int id;
     private int userId;
-    private Date time;
     private String content;
     private String media;
-    private int likes;
-    private int comments;
-    private boolean isAd;
+    private User user; // Thêm thuộc tính User để lưu thông tin người dùng
 
-    public Post() {}
-
-    public Post(int id, int userId, Date time, String content, String media, int likes, int comments, boolean isAd) {
-        this.id = id;
-        this.userId = userId;
-        this.time = time;
-        this.content = content;
-        this.media = media;
-        this.likes = likes;
-        this.comments = comments;
-        this.isAd = isAd;
-    }
-
-
+    // Getter và Setter cho id
     public int getId() {
         return id;
     }
@@ -34,6 +16,7 @@ public class Post {
         this.id = id;
     }
 
+    // Getter và Setter cho userId
     public int getUserId() {
         return userId;
     }
@@ -42,14 +25,7 @@ public class Post {
         this.userId = userId;
     }
 
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
-
+    // Getter và Setter cho content
     public String getContent() {
         return content;
     }
@@ -58,6 +34,7 @@ public class Post {
         this.content = content;
     }
 
+    // Getter và Setter cho media
     public String getMedia() {
         return media;
     }
@@ -66,27 +43,12 @@ public class Post {
         this.media = media;
     }
 
-    public int getLikes() {
-        return likes;
+    // Getter và Setter cho user
+    public User getUser() {
+        return user;
     }
 
-    public void setLikes(int likes) {
-        this.likes = likes;
-    }
-
-    public int getComments() {
-        return comments;
-    }
-
-    public void setComments(int comments) {
-        this.comments = comments;
-    }
-
-    public boolean isIsAd() {
-        return isAd;
-    }
-
-    public void setIsAd(boolean isAd) {
-        this.isAd = isAd;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

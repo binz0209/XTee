@@ -51,9 +51,9 @@
 
                         <div class="report-container">
                             <div class="report-user-info">
-                                <img src="https://via.placeholder.com/50" alt="User Avatar" class="report-avatar-img">
+                                <img src="https://via.placeholder.com/50" alt="User Avatar" class="admin-avatar-img">
                                 <div>
-                                    <span class="report-user-name">Pham Van An 1</span>
+                                    <span class="admin-user-name">Pham Van An 1</span>
                                     <span class="role">Member</span>
                                     <span class="report-time">10:30 AM, Oct 1, 2024</span>
                                 </div>

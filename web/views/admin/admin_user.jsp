@@ -7,6 +7,19 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="model.User" %>
 <%@ page import="java.util.List" %>
+<%@ page import="dao.UserDAO" %>
+
+<%
+    // Lấy danh sách người dùng từ UserDAO
+    List<User> userList = null;
+    try {
+        UserDAO userDAO = new UserDAO();
+        userList = userDAO.getAllUsers(); // Gọi hàm để lấy tất cả người dùng
+        request.setAttribute("userList", userList); // Đưa danh sách người dùng vào request
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+%>
 
 <html lang="en">
 <head>
@@ -47,10 +60,7 @@
                             <th style="text-align: center;">Join date</th>
                         </tr>
                         <%
-                            List<User> userList = (List<User>) request.getAttribute("userList");
                             if (userList != null && !userList.isEmpty()) {
-                        %>
-                        <%
                                 for (User user : userList) {
                         %>
                         <tr>
@@ -65,8 +75,8 @@
                         </tr>
                         <%
                                 }
+                            } else { 
                         %>
-                        <% } else { %>
                         <tr>
                             <td colspan="6" class="no-users-found">No users found.</td> <!-- Thông báo không có người dùng -->
                         </tr>

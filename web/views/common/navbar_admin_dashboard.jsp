@@ -16,19 +16,19 @@
     <nav class="navbar flex-column sidebar">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_user.jsp") ? "active" : "" %>" href="./admin_user.jsp">User</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_user.jsp") ? "active" : "" %>" href="${pageContext.request.contextPath}/adminUser">User</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_content.jsp") ? "active" : "" %>" href="./admin_content.jsp">Content</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_content.jsp") ? "active" : "" %>" href="${pageContext.request.contextPath}/adminContent">Content</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_report.jsp") ? "active" : "" %>" href="./admin_report.jsp">Report</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_report.jsp") ? "active" : "" %>" href="${pageContext.request.contextPath}/adminReport">Report</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_ads.jsp") ? "active" : "" %>" href="./admin_ads.jsp">Advertisement</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_ads.jsp") ? "active" : "" %>" href="${pageContext.request.contextPath}/adminAdvertisement">Advertisement</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_auditlog.jsp") ? "active" : "" %>" href="./admin_auditlog.jsp">Audit/Log</a>
+                <a class="nav-link <%= request.getRequestURI().endsWith("/admin_auditlog.jsp") ? "active" : "" %>" href="${pageContext.request.contextPath}/adminAuditLog">Audit/Log</a>
             </li>
             <li class="nav-item logout-item">
                 <a class="nav-link" href="../member/login.jsp">

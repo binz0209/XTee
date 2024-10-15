@@ -27,6 +27,8 @@
         }
 
         .content-container {
+            margin-left: 25%;
+            margin-right: 25%;
             width: 50%;
             padding: 20px;
             border-radius: 8px;
@@ -122,7 +124,6 @@
                 <!-- Include newpost -->
                 <jsp:include page="../common/new_post.jsp" />
     
-                
                 <!-- Include post content -->
                 <jsp:include page="../common/post_content.jsp" />
             </div>

@@ -275,9 +275,9 @@
                         </div>
 
                         <div class="tabs">
-                            <a href="#" class="active"><b>Posts</b></a>
+                            <a href="../member/profile_post.jsp" class="active"><b>Posts</b></a>
                             <a href="#">Friends</a>
-                            <a href="#">Pictures</a>
+                            <a href="../member/picture_list.jsp">Pictures</a>
                         </div>
                     </div>
 
