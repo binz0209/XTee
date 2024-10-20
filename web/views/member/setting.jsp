@@ -9,25 +9,37 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Setting</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+        
         <style>
-
-            .body {
-                font-family: Arial, sans-serif;
-                background-color: #f0f0f0;
+            html,
+            body {
+                height: 100%;
                 margin: 0;
                 padding: 0;
+                font-family: 'Inter', sans-serif;
+                background-color: #f8f9fa;
             }
-            .container{
-                width: 60%; /* Giới hạn chiều rộng container */
-                margin: 40px auto; /* Căn giữa container với khoảng cách trên và dưới */
+    
+            .flex-container {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                height: 100%;
+            }
+    
+            .content-container {
+                
+                margin-top: 70px;
+                margin-left: 25%;
+                margin-right: 25%;
+                width: 50%;
                 padding: 20px;
-                background-color: #fff; /* Màu nền trắng của container */
-                border-radius: 15px; /* Bo tròn các góc */
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                border-radius: 8px;
+                overflow-y: auto;
             }
-
-
 
             .member-info{
                 display: flex;
@@ -128,48 +140,55 @@
         </style>
     </head>
     <body>
-
-        <div class="container">
-            <div class="profile-header">
-                <div class="profile-pic">
-                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
-                </div>
-                <div class="profile-info">
-                    <h2>Nguyen Xuan Hung</h2>
-                </div>
-                <div class="logout-row">
-                    <input type="submit" value="Log out" class="btn-logout"/>
-                </div>
+        <div>
+            <div>
+                <!-- Gọi header -->
+                <jsp:include page="../common/header_member.jsp" />
             </div>
-            <div class="member-info">
-                <div class="info">
-                    <b>Birthday: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Address: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Phone Number: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Email: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Username: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
-                <div class="info">
-                    <b>Password: </b>
-                    <input type="submit" value="Change" class="btn-change"/>
-                </div>
+            <div class="flex-container">
+                <div class="content-container">
+                    <div class="container">
+                        <div class="profile-header">
+                            <div class="profile-pic">
+                                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="profile-info">
+                                <h2>Nguyen Xuan Hung</h2>
+                            </div>
+                            <div class="logout-row">
+                                <input type="submit" value="Log out" class="btn-logout"/>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <div class="info">
+                                <b>Birthday: </b>
+                                <input type="submit" value="Change" class="btn-change"/>
+                            </div>
+                            <div class="info">
+                                <b>Address: </b>
+                                <input type="submit" value="Change" class="btn-change"/>
+                            </div>
+                            <div class="info">
+                                <b>Phone Number: </b>
+                                <input type="submit" value="Change" class="btn-change"/>
+                            </div>
+                            <div class="info">
+                                <b>Email: </b>
+                                <input type="submit" value="Change" class="btn-change"/>
+                            </div>
+                            <div class="info">
+                                <b>Username: </b>
+                                <input type="submit" value="Change" class="btn-change"/>
+                            </div>
+                            <div class="info">
+                                <b>Password: </b>
+                                <input type="submit" value="Change" class="btn-change"/>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </body>
 </html>

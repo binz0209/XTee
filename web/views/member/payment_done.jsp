@@ -68,7 +68,9 @@
             <p>Amount: <strong>100.000 VND</strong></p>
         </div>
 
-        <button class="btn btn-primary">Back to Home</button>
+        <form action="${pageContext.request.contextPath}/views/member/homepage.jsp" method="post">
+            <button class="btn btn-primary">Back to Home</button>
+        </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

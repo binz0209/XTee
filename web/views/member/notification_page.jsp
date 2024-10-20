@@ -17,27 +17,27 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                font-family: Arial, sans-serif;
+                font-family: 'Inter', sans-serif;
                 background-color: #f8f9fa;
             }
-
+    
             .flex-container {
                 display: flex;
-                /* Sử dụng Flexbox */
+                justify-content: center;
+                align-items: flex-start;
                 height: 100%;
-                /* Chiều cao của container */
             }
-            h1 {
-                color: #343a40;
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
+    
             .content-container {
-                flex: 1;
+                margin-top: 70px;
+                margin-left: 25%;
+                margin-right: 25%;
+                width: 50%;
                 padding: 20px;
+                border-radius: 8px;
                 overflow-y: auto;
             }
+
             .notifications-container {
                 max-width: 1000px;
                 margin: 50px auto;
@@ -46,68 +46,89 @@
                 background-color: #f9f9f9;
                 padding: 20px;
             }
+
+            .notification-header-container {
+                display: flex; /* Thay đổi để tạo thành flex container */
+                justify-content: space-between; /* Tạo khoảng cách giữa tiêu đề và filter */
+                align-items: center; /* Căn giữa theo chiều dọc */
+                margin-bottom: 20px; /* Thêm khoảng cách phía dưới */
+            }
+
             .notification-header {
                 font-size: 24px;
                 text-align: left;
-                margin-bottom: 20px;
             }
+
+            .notification-filter {
+                display: flex; /* Thay đổi để tạo thành flex container */
+                align-items: center; /* Căn giữa theo chiều dọc */
+            }
+
+            .notification-filter label {
+                margin-right: 10px; /* Thêm khoảng cách giữa label và select */
+            }
+
             .notification-item {
                 padding: 10px;
                 border-bottom: 1px solid #ddd;
             }
+
             .notification-item:hover {
                 border-bottom: none;
                 background-color: #ddd;
                 color: black;
             }
+
             .notification-text {
                 font-size: 16px;
                 color: #333;
             }
+
             .notification-time {
                 font-size: 12px;
                 color: #888;
             }
-            .notification{
-                display: flex;
-                justify-content: right;
-            }
-            .notification-filter{
-                position: relative; left: 821px; top: -46px;
-            }
         </style>
     </head>
     <body>
+        
         <div>
-            <!-- Gọi header -->
-            <jsp:include page="../common/header_member.jsp" />
-        </div>
-        <div class="notifications-container">
-            <div class="notification-header">NOTIFICATIONS</div>
+            <div>
+                <!-- Gọi header -->
+                <jsp:include page="../common/header_member.jsp" />
+            </div>
+            <div class="flex-container">
+                <div class="content-container">
+                    <div class="notifications-container">
+                        <div class="notification-header-container">
+                            <div class="notification-header">NOTIFICATIONS</div>
+                            <!-- Date Filter -->
+                            <div class="notification-filter">
+                                <label for="filterDate">Sort by date:</label>
+                                <select id="filterDate" onchange="filterNotifications()">
+                                    <option value="all">All</option>
+                                    <option value="today">Today</option>
+                                    <option value="week">Last 7 Days</option>
+                                    <option value="month">This Month</option>
+                                </select>
+                            </div>
+                        </div>
 
-            <!-- Date Filter -->
-            <div class="notification-filter">
-                <label for="filterDate">Sort by date:</label>
-                <select id="filterDate" onchange="filterNotifications()">
-                    <option value="all">All</option>
-                    <option value="today">Today</option>
-                    <option value="week">Last 7 Days</option>
-                    <option value="month">This Month</option>
-                </select>
-            </div>
-
-            <!-- Sample Notification Items -->
-            <div class="notification-item" data-date="2024-10-08">
-                <div class="notification-text">You have a new message from Hung.</div>
-                <div class="notification-time">2 hours ago</div>
-            </div>
-            <div class="notification-item" data-date="2024-08-07">
-                <div class="notification-text">Nguyen Huu Hoai Linh liked your post.</div>
-                <div class="notification-time">1 day ago</div>
-            </div>
-            <div class="notification-item" data-date="2024-10-05">
-                <div class="notification-text">You received a friend request from Truong Huy.</div>
-                <div class="notification-time">3 days ago</div>
+                        <!-- Sample Notification Items -->
+                        <div class="notification-item" data-date="2024-10-08">
+                            <div class="notification-text">You have a new message from Hung.</div>
+                            <div class="notification-time">2 hours ago</div>
+                        </div>
+                        <div class="notification-item" data-date="2024-08-07">
+                            <div class="notification-text">Nguyen Huu Hoai Linh liked your post.</div>
+                            <div class="notification-time">1 day ago</div>
+                        </div>
+                        <div class="notification-item" data-date="2024-10-05">
+                            <div class="notification-text">You received a friend request from Truong Huy.</div>
+                            <div class="notification-time">3 days ago</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

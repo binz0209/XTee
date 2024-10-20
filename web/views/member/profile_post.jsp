@@ -14,15 +14,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Profile Page</title>
         <link rel="stylesheet" href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-        <!-- Font Awesome for icons -->
-        <link href="assets/css/style.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
         <style>
             html,
             body {
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                font-family: Arial, sans-serif;
+                font-family: 'Inter', sans-serif;
                 background-color: #f8f9fa;
             }
 
@@ -40,6 +40,7 @@
             }
 
             .content-container {
+                margin-top: 70px;
                 flex: 1;
                 padding: 20px;
                 overflow-y: auto;
@@ -275,9 +276,9 @@
                         </div>
 
                         <div class="tabs">
-                            <a href="../member/profile_post.jsp" class="active"><b>Posts</b></a>
-                            <a href="#">Friends</a>
-                            <a href="../member/picture_list.jsp">Pictures</a>
+                            <a href="./profile_post.jsp" class="active"><b>Posts</b></a>
+                            <a href="./friends.jsp">Friends</a>
+                            <a href="./picture_list.jsp">Pictures</a>
                         </div>
                     </div>
 

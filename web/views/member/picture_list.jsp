@@ -16,26 +16,25 @@
                 height: 100%;
                 margin: 0;
                 padding: 0;
-                font-family: Arial, sans-serif;
+                font-family: 'Inter', sans-serif;
                 background-color: #f8f9fa;
             }
-
+    
             .flex-container {
                 display: flex;
-                /* Sử dụng Flexbox */
+                justify-content: center;
+                align-items: flex-start;
                 height: 100%;
-                /* Chiều cao của container */
             }
-
-            h1 {
-                color: #343a40;
-                text-align: center;
-                margin-bottom: 20px;
-            }
-
+    
             .content-container {
-                flex: 1;
+                
+                margin-top: 70px;
+                margin-left: 25%;
+                margin-right: 25%;
+                width: 50%;
                 padding: 20px;
+                border-radius: 8px;
                 overflow-y: auto;
             }
 
