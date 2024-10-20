@@ -10,22 +10,16 @@
             <file>file:/D:/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
         </group>
         <group name="PRO192Class">
-            <file>file:/D:/XTee_Project/XTee/web/WEB-INF/web.xml</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/model/Post.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/common/post_content.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/dao/PostDAO.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/member/profile_post.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/utils/InputValidator.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/member/picture_list.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/common/header_member.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminContentServlet.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/assets/css/style.css</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/ads_payment.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/setting.jsp</file>
             <file>file:/D:/XTee_Project/XTee/web/views/member/homepage.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/utils/DBConnection.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_user.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/model/User.java</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/dao/UserDAO.java</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminUserMngServlet.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/payment_standard.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/profile_post.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/payment_vip.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/payment_done.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/message_page.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/assets/css/style.css</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/notification_page.jsp</file>
         </group>
     </open-files>
 </project-private>
