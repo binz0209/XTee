@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name="MemberProfileServlet", urlPatterns={"/MemberProfileServlet"})
-public class MemberProfileServlet extends HttpServlet {
+@WebServlet(name="MemberPaymentServlet", urlPatterns={"/MemberPaymentServlet"})
+public class PaymentServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -17,10 +17,10 @@ public class MemberProfileServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet MemberProfileServlet</title>");  
+            out.println("<title>Servlet MemberPaymentServlet</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet MemberProfileServlet at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet MemberPaymentServlet at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }

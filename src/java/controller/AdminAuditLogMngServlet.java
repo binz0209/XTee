@@ -8,12 +8,12 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(name="AdminReportServlet", urlPatterns={"/AdminReportServlet"})
-public class AdminReportServlet extends HttpServlet {
+@WebServlet(name="AdminAuditLogServlet", urlPatterns={"/AdminAuditLogServlet"})
+public class AdminAuditLogMngServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         // Chuyển hướng đến trang admin_user.jsp
-        request.getRequestDispatcher("/views/admin/admin_report.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/admin/admin_auditlog.jsp").forward(request, response);
     } 
 
     @Override

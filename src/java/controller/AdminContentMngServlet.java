@@ -11,7 +11,7 @@ import java.util.List;
 import model.Post;
 
 @WebServlet(name="AdminContentServlet", urlPatterns={"/AdminContentServlet"})
-public class AdminContentServlet extends HttpServlet {
+public class AdminContentMngServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         try {
