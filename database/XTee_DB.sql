@@ -1,5 +1,5 @@
 -- Create the XTee database
-CREATE DATABASE XTee;
+create DATABASE XTee;
 GO
 
 -- Use the XTee database
@@ -139,58 +139,63 @@ SELECT * FROM Notifications;
 SELECT * FROM Reports;
 SELECT * FROM AuditLogs;
 
+-- Insert data into Users table
+INSERT INTO Users (fullName, username, avatar, password, role, joinDate, birthday, gender, phoneNumber, email, friendsCount, postsCount) 
+VALUES 
+	(N'Nguyễn Hữu Hoài Linh', 'tulinh294', './assets/images/tuLinh294.jpg', '1312', 'admin', '2024-01-01', '2004-09-02', 'male', '0899884991', 'hoailinh.dienban@gmail.com', 0, 0),
+	(N'Nguyễn Xuân Hùng', 'xhumhehe', './assets/images/tuLinh294.jpg', '1312', 'member', '2024-01-01', '2004-09-02', 'male', '0987654321', 'xhum.dienban@gmail.com', 0, 0);
+
 -- Insert data into Posts table (sau khi đã có dữ liệu trong bảng Users)
 INSERT INTO Posts (userId, content, media, likes, comments, isAd)
 VALUES
-(5, 'Had a great meal today!', '/XTee/assets/images/post_1.jpg', 15, 3, 0),
-(5, 'Check out this recipe I found!', '/XTee/assets/images/post_2.jpg', 22, 5, 0),
-(5, 'New promotional post!', '/XTee/assets/images/post_3.jpg', 50, 12, 1);
+(1, 'Had a great meal today!', './assets/images/post_1.jpg', 15, 3, 0),
+(1, 'Check out this recipe I found!', './assets/images/post_2.jpg', 22, 5, 0),
+(1, 'New promotional post!', './assets/images/post_3.jpg', 50, 12, 1);
 
 -- Insert data into Messages table
 INSERT INTO Messages (senderId, receiverId, content)
 VALUES
-(5, 7, 'Hey, how are you?'),
-(7, 5, 'I am good, thanks! What about you?');
+(1, 2, 'Hey, how are you?'),
+(2, 1, 'I am good, thanks! What about you?');
 
 -- Insert data into Ads table
 INSERT INTO Ads (userId, postId, campaignName, startDate, endDate, adContent, adType, budget)
 VALUES
-(5, 4, 'Food Lovers Campaign', '2024-10-01', '2024-11-01', 'Check out this amazing dish!', 'Standard', 100.00),
-(7, 6, 'Recipe Sharing', '2024-10-05', '2024-11-05', 'Discover new recipes every day!', 'VIP', 500.00);
-
+(1, 1, 'Food Lovers Campaign', '2024-10-01', '2024-11-01', 'Check out this amazing dish!', 'Standard', 100.00),
+(2, 2, 'Recipe Sharing', '2024-10-05', '2024-11-05', 'Discover new recipes every day!', 'VIP', 500.00);
 
 -- Insert data into Friendships table
 INSERT INTO Friendships (userId1, userId2, status)
 VALUES
-(5, 7, 'Pending');
+(1, 2, 'Pending');
 
 -- Insert data into Comments table
 INSERT INTO Comments (postId, userId, commentText)
 VALUES
-(4, 5, 'That looks delicious!'),
-(5, 5, 'I need to try this recipe!');
+(1, 1, 'That looks delicious!'),
+(2, 1, 'I need to try this recipe!');
 
 -- Insert data into Likes table
 INSERT INTO Likes (postId, userId)
 VALUES
-(4, 5),
-(5, 7);
+(1, 1),
+(2, 2);
 
 -- Insert data into Notifications table
 INSERT INTO Notifications (userId, triggeredByUserId, notificationType, postId)
 VALUES
-(5, 7, 'like', 5),
-(5, 7, 'comment', 6);
+(1, 2, 'like', 1),
+(1, 2, 'comment', 2);
 
 -- Insert data into Reports table
 INSERT INTO Reports (postId, userId, reportReason)
 VALUES
-(6, 5, 'Inappropriate content'),
-(6, 5, 'Spam post');
+(2, 1, 'Inappropriate content'),
+(2, 1, 'Spam post');
 
 -- Insert data into AuditLogs table
 INSERT INTO AuditLogs (userId, actionType, targetPostId)
 VALUES
-(5, 'login', NULL),
-(5, 'post_created', 5),
-(5, 'post_deleted', 5);
+(1, 'login', NULL),
+(1, 'post_created', 1),
+(1, 'post_deleted', 1);

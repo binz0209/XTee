@@ -45,9 +45,4 @@ public class DBConnection {
             return false;
         }
     }
-
-    public static void main(String[] args) {
-        DBConnection dbConnection = new DBConnection();
-        System.out.println(dbConnection.checkConnection());
-    }
 }

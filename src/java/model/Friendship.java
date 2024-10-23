@@ -49,5 +49,8 @@ public class Friendship {
         this.status = status;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Friendship{" + "userId1=" + userId1 + ", userId2=" + userId2 + ", friendshipDate=" + friendshipDate + ", status=" + status + '}';
+    }
 }

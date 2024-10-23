@@ -201,6 +201,10 @@ public class User {
     public void setReports(List<Report> reports) {
         this.reports = reports;
     }
-    
+
+    @Override
+    public String toString() {
+        return "User{" + "id=" + id + ", fullName=" + fullName + ", username=" + username + ", avatar=" + avatar + ", password=" + password + ", role=" + role + ", joinDate=" + joinDate + ", birthday=" + birthday + ", gender=" + gender + ", phoneNumber=" + phoneNumber + ", email=" + email + ", friendsCount=" + friendsCount + ", postsCount=" + postsCount + ", posts=" + posts + ", comments=" + comments + ", likes=" + likes + ", advertisements=" + advertisements + ", notifications=" + notifications + ", reports=" + reports + '}';
+    }
 }
 
