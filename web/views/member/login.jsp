@@ -136,7 +136,8 @@
         <p>Come to us!</p>
       </div>
       <div class="login-form">
-        <form action="login" method="post">
+        <form action="${pageContext.request.contextPath}/login" method="post">
+
           <input
             type="text"
             id="username"

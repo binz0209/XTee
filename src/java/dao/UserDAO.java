@@ -15,12 +15,10 @@ public class UserDAO {
     // Hàm lấy tất cả user từ database
     public List<User> getAllUsers() throws Exception {
         List<User> users = new ArrayList<>();
-        
+
         String sql = "SELECT * FROM Users";
-        
-        try (Connection conn = new DBConnection().getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql);
-             ResultSet rs = ps.executeQuery()) {
+
+        try (Connection conn = new DBConnection().getConnection(); PreparedStatement ps = conn.prepareStatement(sql); ResultSet rs = ps.executeQuery()) {
 
             while (rs.next()) {
                 User user = new User();
@@ -37,23 +35,22 @@ public class UserDAO {
                 user.setEmail(rs.getString("email"));
                 user.setFriendsCount(rs.getInt("friendsCount"));
                 user.setPostsCount(rs.getInt("postsCount"));
-                
+
                 users.add(user);
             }
         } catch (SQLException e) {
             e.printStackTrace();
             throw new Exception("Error while fetching users", e);
         }
-        
+
         return users;
     }
 
     // Hàm thêm user vào database
     public boolean addUser(User user) throws Exception {
         String sql = "INSERT INTO Users (fullName, username, avatar, password, role, birthday, gender, phoneNumber, email) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        
-        try (Connection conn = new DBConnection().getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+        try (Connection conn = new DBConnection().getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, user.getFullName());
             ps.setString(2, user.getUsername());
@@ -76,9 +73,8 @@ public class UserDAO {
     // Hàm xóa user từ database
     public boolean deleteUser(int userId) throws Exception {
         String sql = "DELETE FROM Users WHERE id = ?";
-        
-        try (Connection conn = new DBConnection().getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+        try (Connection conn = new DBConnection().getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, userId);
             int result = ps.executeUpdate();
@@ -88,14 +84,13 @@ public class UserDAO {
             throw new Exception("Error while deleting user", e);
         }
     }
-    
+
     // Hàm lấy user theo ID
     public User getUserById(int userId) throws Exception {
         User user = null;
         String sql = "SELECT * FROM Users WHERE id = ?";
 
-        try (Connection conn = new DBConnection().getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = new DBConnection().getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setInt(1, userId);
             ResultSet rs = ps.executeQuery();
@@ -115,12 +110,12 @@ public class UserDAO {
 
         return user;
     }
+
     // Hàm cập nhật thông tin user trong database
     public boolean updateUser(User user) throws Exception {
         String sql = "UPDATE Users SET fullName = ?, username = ?, avatar = ?, password = ?, role = ?, birthday = ?, gender = ?, phoneNumber = ?, email = ? WHERE id = ?";
 
-        try (Connection conn = new DBConnection().getConnection();
-             PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = new DBConnection().getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
 
             ps.setString(1, user.getFullName());
             ps.setString(2, user.getUsername());
@@ -140,5 +135,32 @@ public class UserDAO {
             throw new Exception("Error while updating user", e);
         }
     }
+
+    public User checkLogin(String username, String password) throws Exception {
+    String sql = "SELECT * FROM Users WHERE username = ? AND password = ?";
+    User user = null;
+
+    try (Connection conn = new DBConnection().getConnection(); 
+         PreparedStatement ps = conn.prepareStatement(sql)) {
+
+        ps.setString(1, username);
+        ps.setString(2, password); // Nên mã hóa mật khẩu trước khi so sánh
+
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            user = new User();
+            user.setId(rs.getInt("id"));
+            user.setFullName(rs.getString("fullName"));
+            user.setUsername(rs.getString("username"));
+            user.setAvatar(rs.getString("avatar"));
+            // Thiết lập các thuộc tính khác của User nếu cần
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+        throw new Exception("Error while checking login", e);
+    }
+
+    return user;
+}
 
 }

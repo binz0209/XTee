@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
     <welcome-file-list>
         <welcome-file>adminUser</welcome-file>
         <!-- Redirect to servlet instead of directly to JSP -->
@@ -8,6 +12,18 @@
         <servlet-name>AdminUserMngServlet</servlet-name>
         <servlet-class>controller.AdminUserMngServlet</servlet-class>
         <!-- Correct package -->
+    </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>controller.HomeServlet</url-pattern>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>controller.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>AdminUserMngServlet</servlet-name>
