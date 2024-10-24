@@ -10,12 +10,35 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/bootstrap.min.css">
+        
         <style>
+            html,
             body {
-                font-family: Arial, sans-serif;
-                background-color: #ffffff;
+                height: 100%;
                 margin: 0;
                 padding: 0;
+                font-family: 'Inter', sans-serif;
+                background-color: #f8f9fa;
+            }
+    
+            .flex-container {
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                height: 100%;
+            }
+    
+            .content-container {
+                
+                margin-top: 70px;
+                margin-left: 25%;
+                margin-right: 25%;
+                width: 50%;
+                padding: 20px;
+                border-radius: 8px;
+                overflow-y: auto;
             }
 
             header {
@@ -251,61 +274,71 @@
         </style>
     </head>
     <body>
-        <div class="profile-container">
-            <div class="profile-header">
-                <div class="profile-pic">
-                    <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
-                </div>
-                <div class="profile-info">
-                    <h2>Nguyen Xuan Hung</h2>
-                    <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
-                </div>
-                <div class="actions">
-                    <button class="edit-profile">
-                        <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
-                    </button>
-                    <button class="ads-service">
-                        <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
-                    </button>
+        <div>
+            <div>
+                <!-- Gọi header -->
+                <jsp:include page="../common/header_member.jsp" />
+            </div>
+            <div class="flex-container">
+                <div class="content-container">
+                    <div class="profile-container">
+                        <div class="profile-header">
+                            <div class="profile-pic">
+                                <img src="${pageContext.request.contextPath}/assets/images/tuLinh294.jpg" alt="Profile Picture">
+                            </div>
+                            <div class="profile-info">
+                                <h2>Nguyen Xuan Hung</h2>
+                                <span><b>4</b> posts &nbsp;&nbsp;&nbsp; <b>3</b> friends</span>
+                            </div>
+                            <div class="actions">
+                                <button class="edit-profile">
+                                    <span class="edit-outline" style="position: relative; left: -6px; top: 2px;"></span>Edit Profile
+                                </button>
+                                <button class="ads-service">
+                                    <span class="speaker" style="position: relative; left: -6px; top: 2px;"></span>Ads service
+                                </button>
+                            </div>
+                        </div>
+
+                        
+                        <div class="tabs">
+                            <a href="./profile_post.jsp" class="active"><b>Posts</b></a>
+                            <a href="./friends.jsp">Friends</a>
+                            <a href="./picture_list.jsp">Pictures</a>
+                        </div>
+                        <div class="friends-list">
+                            <div class="friend">
+                                <div class="friend-info">
+                                    <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 1" class="friend-avatar">
+                                    <span class="friend-name">Nguyễn Văn A</span>
+                                </div>
+                                <i class="show-more"></i>
+                            </div>
+                            <div class="friend">
+                                <div class="friend-info">
+                                    <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 2" class="friend-avatar">
+                                    <span class="friend-name">Trần Thị B</span>
+                                </div>
+                                <i class="show-more"></i>
+                            </div>
+                            <div class="friend">
+                                <div class="friend-info">
+                                    <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 3" class="friend-avatar">
+                                    <span class="friend-name">Lê Văn C</span>
+                                </div>
+                                <i class="show-more"></i>
+                            </div>
+                            <div class="friend">
+                                <div class="friend-info">
+                                    <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 4" class="friend-avatar">
+                                    <span class="friend-name">Nguyễn Thị D</span>
+                                </div>
+                                <i class="show-more"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="tabs">
-                <a href="#">Posts</a>
-                <a href="#"  class="active"><b>Friends</b></a>
-                <a href="#">Pictures</a>
-            </div>
-            <div class="friends-list">
-                <div class="friend">
-                    <div class="friend-info">
-                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 1" class="friend-avatar">
-                        <span class="friend-name">Nguyễn Văn A</span>
-                    </div>
-                    <i class="show-more"></i>
-                </div>
-                <div class="friend">
-                    <div class="friend-info">
-                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 2" class="friend-avatar">
-                        <span class="friend-name">Trần Thị B</span>
-                    </div>
-                    <i class="show-more"></i>
-                </div>
-                <div class="friend">
-                    <div class="friend-info">
-                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 3" class="friend-avatar">
-                        <span class="friend-name">Lê Văn C</span>
-                    </div>
-                    <i class="show-more"></i>
-                </div>
-                <div class="friend">
-                    <div class="friend-info">
-                        <img src="../../assets/images/tuLinh294.jpg" alt="Bạn 4" class="friend-avatar">
-                        <span class="friend-name">Nguyễn Thị D</span>
-                    </div>
-                    <i class="show-more"></i>
-                </div>
-
-
-            </div>
+        </div>
     </body>
 </html>

@@ -115,5 +115,30 @@ public class UserDAO {
 
         return user;
     }
+    // Hàm cập nhật thông tin user trong database
+    public boolean updateUser(User user) throws Exception {
+        String sql = "UPDATE Users SET fullName = ?, username = ?, avatar = ?, password = ?, role = ?, birthday = ?, gender = ?, phoneNumber = ?, email = ? WHERE id = ?";
+
+        try (Connection conn = new DBConnection().getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setString(1, user.getFullName());
+            ps.setString(2, user.getUsername());
+            ps.setString(3, user.getAvatar());
+            ps.setString(4, user.getPassword());
+            ps.setString(5, user.getRole());
+            ps.setDate(6, new java.sql.Date(user.getBirthday().getTime()));
+            ps.setString(7, user.getGender());
+            ps.setString(8, user.getPhoneNumber());
+            ps.setString(9, user.getEmail());
+            ps.setInt(10, user.getId());
+
+            int result = ps.executeUpdate();
+            return result > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new Exception("Error while updating user", e);
+        }
+    }
 
 }

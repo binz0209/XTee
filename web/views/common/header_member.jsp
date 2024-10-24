@@ -6,12 +6,18 @@
         <title>Header Member</title>
         <style>
             .header {
-                overflow: hidden;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                max-height: 80px;
+                padding: 10px 20px;
                 background-color: #FFDA5A;
-                display: flex; /* Sử dụng flexbox để căn chỉnh */
-                align-items: center; /* Căn giữa theo chiều dọc */
-                padding: 10px; /* Thêm khoảng cách xung quanh */
-                border-bottom: 1px solid #000000; /* Optional: Add border between items */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                z-index: 1000; /* Đảm bảo header luôn ở trên các phần tử khác */
             }
 
             /* Logo */

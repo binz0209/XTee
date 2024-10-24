@@ -13,6 +13,18 @@ h1 {
     margin-bottom: 20px;
 }
 
+.content-container {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Flex container */
+.flex-container {
+    display: flex; /* Sử dụng Flexbox để sắp xếp navbar và content */
+    height: calc(100vh - 60px); /* Đặt chiều cao toàn bộ viewport trừ chiều cao của header */
+}
+
 .search-container {
     display: flex;
     align-items: center;
@@ -34,19 +46,6 @@ h1 {
     width: 300px;
     background-color: #D9D9D9;
 }
-
-.content-container {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto;
-}
-
-/* Flex container */
-.flex-container {
-    display: flex; /* Sử dụng Flexbox để sắp xếp navbar và content */
-    height: calc(100vh - 60px); /* Đặt chiều cao toàn bộ viewport trừ chiều cao của header */
-}
-
 
 /* HEADER ADMINDASHBOARD */
 .header-admindashboard {
@@ -89,6 +88,8 @@ h1 {
     flex: 1; /* Chiếm toàn bộ không gian có sẵn */
 }
 
+
+/* ===================== */
 .ads-container {
     background-color: #ffffff;
     padding: 15px;

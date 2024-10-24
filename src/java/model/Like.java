@@ -49,5 +49,8 @@ public class Like {
         this.likeDate = likeDate;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Like{" + "likeId=" + likeId + ", postId=" + postId + ", userId=" + userId + ", likeDate=" + likeDate + '}';
+    }
 }

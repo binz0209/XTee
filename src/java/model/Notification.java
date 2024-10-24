@@ -79,5 +79,8 @@ public class Notification {
         this.isRead = isRead;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Notification{" + "notificationId=" + notificationId + ", userId=" + userId + ", triggeredByUserId=" + triggeredByUserId + ", notificationType=" + notificationType + ", postId=" + postId + ", notificationDate=" + notificationDate + ", isRead=" + isRead + '}';
+    }
 }

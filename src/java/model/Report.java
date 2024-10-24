@@ -69,5 +69,8 @@ public class Report {
         this.status = status;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Report{" + "reportId=" + reportId + ", postId=" + postId + ", userId=" + userId + ", reportReason=" + reportReason + ", reportDate=" + reportDate + ", status=" + status + '}';
+    }
 }

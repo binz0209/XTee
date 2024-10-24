@@ -59,5 +59,8 @@ public class Comment {
         this.commentDate = commentDate;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Comment{" + "commentId=" + commentId + ", postId=" + postId + ", userId=" + userId + ", commentText=" + commentText + ", commentDate=" + commentDate + '}';
+    }
 }

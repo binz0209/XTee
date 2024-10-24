@@ -59,5 +59,8 @@ public class AuditLog {
         this.actionTimestamp = actionTimestamp;
     }
 
-    
+    @Override
+    public String toString() {
+        return "AuditLog{" + "logId=" + logId + ", userId=" + userId + ", actionType=" + actionType + ", targetPostId=" + targetPostId + ", actionTimestamp=" + actionTimestamp + '}';
+    }
 }

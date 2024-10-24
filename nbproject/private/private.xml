@@ -3,18 +3,49 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="PRO192Class">
-            <file>file:/D:/XTee_Project/XTee/web/WEB-INF/web.xml</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/model/Post.java</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/utils/DBConnection.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/common/post_content.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/dao/PostDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Comment.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/CommentDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/controller/HomepageServlet.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/NotificationService.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/payment_vip.jsp</file>
             <file>file:/D:/XTee_Project/XTee/src/java/utils/InputValidator.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_user.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/payment_done.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/NotificationDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/payment_standard.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/FriendshipService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/utils/DBConnection.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/UserService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminReportMngServlet.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/AdvertisementDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/AuditLogDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/AuditLog.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/CommentService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/LikeDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/notification_page.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/PostService.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/ads_payment.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/setting.jsp</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/LikeService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Post.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/MessageService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/ReportDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/ReportService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/PostDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/AuditLogService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/controller/HomeServlet.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Friendship.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Message.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Report.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Notification.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/FriendshipDAO.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Like.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/utils/Main.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/model/Advertisement.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/service/AdvertisementService.java</file>
+            <file>file:/D:/XTee_Project/XTee/src/java/dao/MessageDAO.java</file>
             <file>file:/D:/XTee_Project/XTee/src/java/model/User.java</file>
             <file>file:/D:/XTee_Project/XTee/src/java/dao/UserDAO.java</file>
-            <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_content.jsp</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminUserMngServlet.java</file>
-            <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminContentServlet.java</file>
+            <file>file:/D:/XTee_Project/XTee/web/views/member/message_page.jsp</file>
         </group>
         <group>
             <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Notification.java</file>

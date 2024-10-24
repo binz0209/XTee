@@ -129,5 +129,8 @@ public class Advertisement {
         this.status = status;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Advertisement{" + "adId=" + adId + ", userId=" + userId + ", postId=" + postId + ", campaignName=" + campaignName + ", startDate=" + startDate + ", endDate=" + endDate + ", adContent=" + adContent + ", adType=" + adType + ", clicksCount=" + clicksCount + ", viewsCount=" + viewsCount + ", budget=" + budget + ", status=" + status + '}';
+    }
 }
