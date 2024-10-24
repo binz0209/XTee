@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/XTee/web/views/member/friends.jsp</file>
-            <file>file:/D:/XTee/web/assets/js/bootstrap.bundle.min.js</file>
-            <file>file:/D:/XTee/src/java/controller/AdminAuditLogServlet.java</file>
-            <file>file:/D:/XTee/web/views/member/login.jsp</file>
-            <file>file:/D:/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
-        </group>
         <group name="PRO192Class">
             <file>file:/D:/XTee_Project/XTee/web/WEB-INF/web.xml</file>
             <file>file:/D:/XTee_Project/XTee/src/java/model/Post.java</file>
@@ -22,6 +15,27 @@
             <file>file:/D:/XTee_Project/XTee/web/views/admin/admin_content.jsp</file>
             <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminUserMngServlet.java</file>
             <file>file:/D:/XTee_Project/XTee/src/java/controller/AdminContentServlet.java</file>
+        </group>
+        <group>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Notification.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/common/navbar_admin_dashboard.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/admin/admin_auditlog.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/common/header_admindashboard.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Post.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/AuditLog.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Comment.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/admin/admin_ads_details.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/member/login.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Like.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Report.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/controller/AdminUserMngServlet.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/member/payment_done.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Friendship.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Message.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/dao/UserDAO.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/User.java</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/web/views/member/register.jsp</file>
+            <file>file:/C:/Users/This%20PC/Desktop/XTee/src/java/model/Advertisement.java</file>
         </group>
     </open-files>
 </project-private>
