@@ -32,4 +32,5 @@ public class ReportService {
     public boolean updateReportStatus(int reportId, String status) throws Exception {
         return reportDAO.updateReportStatus(reportId, status);
     }
+    
 }

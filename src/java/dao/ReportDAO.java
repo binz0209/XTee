@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Report;
+import model.User;
 import utils.DBConnection;
 
 public class ReportDAO {
@@ -87,4 +88,5 @@ public class ReportDAO {
             throw new Exception("Error while updating report status: " + e.getMessage(), e);
         }
     }
+    
 }

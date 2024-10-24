@@ -143,7 +143,9 @@ SELECT * FROM AuditLogs;
 INSERT INTO Users (fullName, username, avatar, password, role, joinDate, birthday, gender, phoneNumber, email, friendsCount, postsCount) 
 VALUES 
 	(N'Nguyễn Hữu Hoài Linh', 'tulinh294', './assets/images/tuLinh294.jpg', '1312', 'admin', '2024-01-01', '2004-09-02', 'male', '0899884991', 'hoailinh.dienban@gmail.com', 0, 0),
-	(N'Nguyễn Xuân Hùng', 'xhumhehe', './assets/images/tuLinh294.jpg', '1312', 'member', '2024-01-01', '2004-09-02', 'male', '0987654321', 'xhum.dienban@gmail.com', 0, 0);
+	(N'Nguyễn Xuân Hùng', 'xhumhehe', './assets/images/tuLinh294.jpg', '1312', 'member', '2024-01-01', '2004-09-02', 'male', '0987654321', 'xhum.dienban@gmail.com', 0, 0),
+	(N'Nguyễn Hữu Xuân Hùng', 'xlinh', './assets/images/tuLinh294.jpg', '1312', 'member', '2023-12-01', '2004-09-02', 'male', '1234567890', 'hehe.hihii@gmail.com', 0, 0);
+	(N'Nguyễn Xuân Hoài Linh', 'xhlinh2', './assets/images/tuLinh294.jpg', '1312', 'admin', '2024-10-01', '2004-09-02', 'male', '0899884991', 'hoailinh.dienban@gmail.com', 0, 0);
 
 -- Insert data into Posts table (sau khi đã có dữ liệu trong bảng Users)
 INSERT INTO Posts (userId, content, media, likes, comments, isAd)

@@ -141,4 +141,79 @@ public class UserDAO {
         }
     }
 
+    // Hàm tìm kiếm user theo từ khóa
+    public List<User> searchUsers(String keyword) throws Exception {
+        List<User> users = new ArrayList<>();
+        String sql = "SELECT * FROM Users WHERE fullName LIKE ? OR username LIKE ? OR id LIKE ?";
+
+        try (Connection conn = new DBConnection().getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            
+            String searchKeyword = "%" + keyword + "%"; // Thêm ký tự % vào trước và sau từ khóa
+            ps.setString(1, searchKeyword);
+            ps.setString(2, searchKeyword);
+            ps.setString(3, keyword); // Tìm kiếm theo ID chính xác
+
+            try (ResultSet rs = ps.executeQuery()) {
+                while (rs.next()) {
+                    User user = new User();
+                    user.setId(rs.getInt("id"));
+                    user.setFullName(rs.getString("fullName"));
+                    user.setUsername(rs.getString("username"));
+                    user.setAvatar(rs.getString("avatar"));
+                    user.setPassword(rs.getString("password"));
+                    user.setRole(rs.getString("role"));
+                    user.setJoinDate(rs.getDate("joinDate"));
+                    user.setBirthday(rs.getDate("birthday"));
+                    user.setGender(rs.getString("gender"));
+                    user.setPhoneNumber(rs.getString("phoneNumber"));
+                    user.setEmail(rs.getString("email"));
+                    user.setFriendsCount(rs.getInt("friendsCount"));
+                    user.setPostsCount(rs.getInt("postsCount"));
+                    
+                    users.add(user);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new Exception("Error while searching users", e);
+        }
+
+        return users;
+    }
+    
+    // Hàm sắp xếp người dùng theo thuộc tính
+    public List<User> sortUsers(String orderBy) throws Exception {
+        List<User> users = new ArrayList<>();
+        String sql = "SELECT * FROM Users ORDER BY " + orderBy; // Cảnh giác với SQL Injection nếu orderBy không được kiểm tra
+
+        try (Connection conn = new DBConnection().getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt("id"));
+                user.setFullName(rs.getString("fullName"));
+                user.setUsername(rs.getString("username"));
+                user.setAvatar(rs.getString("avatar"));
+                user.setPassword(rs.getString("password"));
+                user.setRole(rs.getString("role"));
+                user.setJoinDate(rs.getDate("joinDate"));
+                user.setBirthday(rs.getDate("birthday"));
+                user.setGender(rs.getString("gender"));
+                user.setPhoneNumber(rs.getString("phoneNumber"));
+                user.setEmail(rs.getString("email"));
+                user.setFriendsCount(rs.getInt("friendsCount"));
+                user.setPostsCount(rs.getInt("postsCount"));
+
+                users.add(user);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new Exception("Error while sorting users", e);
+        }
+
+        return users;
+    }
 }

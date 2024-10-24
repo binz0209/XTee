@@ -3,6 +3,7 @@ package service;
 import java.util.List;
 
 import dao.UserDAO;
+import java.util.Comparator;
 import model.User;
 
 public class UserService {
@@ -36,6 +37,29 @@ public class UserService {
     // Cập nhật thông tin người dùng
     public boolean updateUser(User user) throws Exception {
         return userDAO.updateUser(user);
+    }
+
+    // Hàm tìm kiếm người dùng
+    public List<User> searchUsers(String keyword) throws Exception {
+        return userDAO.searchUsers(keyword);
+    }
+    
+    // Phương thức sắp xếp người dùng
+    public List<User> sortUsers(List<User> users, String sortBy) {
+        switch (sortBy) {
+            case "role":
+                users.sort(Comparator.comparing(User::getRole));
+                break;
+            case "joinDate":
+                users.sort(Comparator.comparing(User::getJoinDate));
+                break;
+            case "name":
+                users.sort(Comparator.comparing(User::getFullName));
+                break;
+            default:
+                break; // Nếu không có tham số sắp xếp hợp lệ, không làm gì cả
+        }
+        return users;
     }
 
 }
