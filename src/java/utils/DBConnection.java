@@ -6,12 +6,13 @@ import java.sql.SQLException;
 
 public class DBConnection {
 
-    private final String serverName = "LAPTOP-NJICJBBF\\SQLEXPRESS";
+    //private final String serverName = "LAPTOP-NJICJBBF\\SQLEXPRESS";
+    private final String serverName = "HoaiLinhWFIL\\SQLEXPRESS";
     private final String dbName = "XTee";
     private final String portNumber = "1433";
     private final String instance = "";  // Cái này có thể để trống nếu không sử dụng instance
     private final String userID = "sa";
-    private final String password = "xuanhung12345";
+    private final String password = "1312";
 
     public Connection getConnection() throws Exception {
         String url;

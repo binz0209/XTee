@@ -137,30 +137,29 @@ public class UserDAO {
     }
 
     public User checkLogin(String username, String password) throws Exception {
-    String sql = "SELECT * FROM Users WHERE username = ? AND password = ?";
-    User user = null;
+        String sql = "SELECT * FROM Users WHERE username = ? AND password = ?";
+        User user = null;
 
-    try (Connection conn = new DBConnection().getConnection(); 
-         PreparedStatement ps = conn.prepareStatement(sql)) {
+        try (Connection conn = new DBConnection().getConnection(); 
+             PreparedStatement ps = conn.prepareStatement(sql)) {
 
-        ps.setString(1, username);
-        ps.setString(2, password); // Nên mã hóa mật khẩu trước khi so sánh
+            ps.setString(1, username);
+            ps.setString(2, password); // Nên mã hóa mật khẩu trước khi so sánh
 
-        ResultSet rs = ps.executeQuery();
-        if (rs.next()) {
-            user = new User();
-            user.setId(rs.getInt("id"));
-            user.setFullName(rs.getString("fullName"));
-            user.setUsername(rs.getString("username"));
-            user.setAvatar(rs.getString("avatar"));
-            // Thiết lập các thuộc tính khác của User nếu cần
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                user = new User();
+                user.setId(rs.getInt("id"));
+                user.setFullName(rs.getString("fullName"));
+                user.setUsername(rs.getString("username"));
+                user.setAvatar(rs.getString("avatar"));
+                // Thiết lập các thuộc tính khác của User nếu cần
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new Exception("Error while checking login", e);
         }
-    } catch (SQLException e) {
-        e.printStackTrace();
-        throw new Exception("Error while checking login", e);
+
+        return user;
     }
-
-    return user;
-}
-
 }

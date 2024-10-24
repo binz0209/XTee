@@ -37,5 +37,8 @@ public class UserService {
     public boolean updateUser(User user) throws Exception {
         return userDAO.updateUser(user);
     }
-
+    
+    public User checkLogin(String username, String password) throws Exception {
+        return userDAO.checkLogin(username, password);
+    }
 }
